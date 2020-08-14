@@ -1,8 +1,8 @@
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      
+    <div>
+      <h1>HELLO MYWALLET</h1>
     </div>
   )
 }
