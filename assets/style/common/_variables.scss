@@ -31,4 +31,19 @@ $danger: $red !default;
 $light: $gray-100 !default;
 $dark: $gray-800 !default;
 
+$backgroung-color-primary: $primary;
 $backgroung-color-card: $gray-500;
+
+$border-radius-card: 20px;
+
+$box-shadow-primary: 0 0 2rem $gray-500;
+$box-shadow-card: 0 0 2rem $primary;
+
+
+
+$font-family-sans-serif: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  'Liberation Mono', 'Courier New', monospace !default;
+$font-family-base: $font-family-sans-serif !default;
