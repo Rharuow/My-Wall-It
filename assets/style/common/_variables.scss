@@ -36,10 +36,8 @@ $backgroung-color-card: $gray-500;
 
 $border-radius-card: 20px;
 
-$box-shadow-primary: 0 0 2rem $gray-500;
+$box-shadow-primary: 0 0 2rem $black;
 $box-shadow-card: 0 0 2rem $primary;
-
-
 
 $font-family-sans-serif: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI',
   Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
@@ -47,3 +45,10 @@ $font-family-sans-serif: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI'
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
   'Liberation Mono', 'Courier New', monospace !default;
 $font-family-base: $font-family-sans-serif !default;
+
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400;
+$font-weight-semibold: 500;
+$font-weight-bold: 600;
+$font-weight-bolder: 900;
