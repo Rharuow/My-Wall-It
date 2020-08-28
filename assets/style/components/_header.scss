@@ -1,0 +1,27 @@
+.header {
+  border-radius: 0 0 20px 20px;
+  background-color: $secondary;
+
+  .header-topbar {
+    padding: 1.2rem;
+    .topbar-img {
+      max-width: 55px;
+      height: 55px;
+      overflow: hidden;
+      border-radius: 55px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .topbar-username {
+      font-size: 1.5rem;
+      white-space: nowrap;
+    }
+
+    button {
+      border-radius: 55px;
+    }
+  }
+}

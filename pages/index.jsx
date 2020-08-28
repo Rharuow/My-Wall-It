@@ -1,7 +1,8 @@
 import React from 'react'
-import { signIn, signOut, useSession } from 'next-auth/client'
+import { useSession } from 'next-auth/client'
 
 import SignIn from './signin'
+import Home from './home'
 
 export default function Page() {
   const [ session, loading ] = useSession()
@@ -12,8 +13,7 @@ export default function Page() {
       <SignIn />
     :
     <>
-      Signed in as {session.user.email} <br/>
-      <button onClick={signOut}>Sign out</button>
+      <Home/>
     </>
     }
   </>
