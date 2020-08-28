@@ -1,14 +1,13 @@
 import React from 'react'
 
-import Expenses from './Expenses'
+import Rent from './Rent'
 
 export default function Board(props) {
-
   return (
     <>
       <div className="board shadow">
-        { props.expenses &&
-          <Expenses expenses={props.expenses} />
+        { props.expense.title === "aluguel" &&
+          <Rent info={props.expense} />
         }
       </div>
     </>

@@ -4,6 +4,14 @@
 
 @import 'common/global';
 
+$slick-font-path: "~slick-carousel/slick/fonts/";
+$slick-font-family: "slick";
+$slick-loader-path: "~slick-carousel/slick/";
+$slick-arrow-color: $black;
+
+@import "~slick-carousel/slick/slick";
+@import "~slick-carousel/slick/slick-theme";
+
 
 $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 
