@@ -12,6 +12,10 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 
+@import './section';
+@import 'atomic/badges';
+@import 'components/avatar';
+@import 'components/board';
 @import 'components/header';
 
 @import 'layout/signIn';

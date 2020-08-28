@@ -2,22 +2,35 @@ import React from 'react';
 import { signOut, useSession } from 'next-auth/client'
 
 import Header from '../../components/common/Header'
-import Section from '../../components/Section'
+import Board from '../../components/Board'
 
 const Home =() => {
-    const [ session, loading ] = useSession()
+  const [ session, loading ] = useSession()
 
-    console.log(" SENSION = ", session.user )
+  const expenses = [{
+    title: "aluguel",
+    name: "Beréu",
+    totalValue: 700,
+    subTotal: 220,
+    status: "paid",
+    participants: [
+      "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E7",
+      "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2",
+    ]
+  }]
 
-    return (
-        <div className="main">
-            <Header name={session.user.name} img={session.user.image} closeSession={signOut}/>
-
-            <div className="spends mt-5">
-                <Section name="Despesas" icon="fas fa-house-user" title="aluguel"/>
-            </div>
-        </div>
-    )
+  return (
+    <div className="main">
+      <Header name={session.user.name} img={session.user.image} closeSession={signOut}/>
+      <div className="section">
+        <h3 className="section-title">Despesas atuais</h3>
+        <Board expenses={expenses}/>
+      </div>
+      <div className="section">
+        <h3 className="section-title">Cadastrar Novas Despesas</h3>
+      </div>
+    </div>
+  )
 }
 
 export default Home

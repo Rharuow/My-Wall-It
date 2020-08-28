@@ -1,0 +1,27 @@
+.board {
+  margin: 0 10px;
+  padding: 15px;
+  background-color: $primary;
+  border-radius: $border-radius-card;
+
+  .board-header {
+    .header-title {
+      text-transform: capitalize;
+
+      .header-title-icon {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .board-footer {
+    .footer-participants {
+      .participants-info {
+        max-width: 3.4375rem;
+        border-radius: 3.4375rem;
+        margin: auto;
+        background-image: url('https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E');
+      }
+    }
+  }
+}

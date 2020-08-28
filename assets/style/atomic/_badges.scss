@@ -1,0 +1,22 @@
+//  ============================================================================
+//  COLORS
+//  ============================================================================
+// 
+//  $   BADGE COLORS
+//
+//      .bge-late
+//      .bge-pending
+//      .bge-paid
+//  ----------------------------------------------------------------------------
+
+@each $colorName, $color in $patternColors {
+  .bge {
+    padding: 2px 10px;
+    border-radius: 2rem;
+    font-size: 12px;
+    color: $white;
+    &.bge-#{$colorName} {
+      background-color: $color;
+    }
+  }
+}
