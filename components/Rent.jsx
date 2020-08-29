@@ -26,7 +26,7 @@ export default function Rent(props) {
       <div className="board-footer mt-2">
         <h5 className="footer-title text-white">Participantes</h5>
         <div className="footer-participants d-flex justify-content-around">
-          {props.info.participants.map( participant => <Avatar img={participant}/>)}
+          {props.info.participants.map( (participant, index) => <Avatar key={index} img={participant}/>)}
         </div>
       </div>
     </>

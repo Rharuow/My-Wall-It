@@ -1,5 +1,6 @@
 import React from 'react';
 import { signOut, useSession } from 'next-auth/client'
+import Slider from "react-slick";
 
 import Header from '../../components/common/Header'
 import Board from '../../components/Board'
@@ -9,6 +10,7 @@ const Home =() => {
 
   const expenses = [
   {
+    id: 1,
     title: "aluguel",
     name: "Beréu",
     totalValue: 700,
@@ -20,6 +22,7 @@ const Home =() => {
     ]
   },
   {
+    id: 2,
     title: "aluguel",
     name: "Beréu",
     totalValue: 700,
@@ -32,18 +35,27 @@ const Home =() => {
   },
 ]
 
+const settings = {
+  dots: true,
+  arrows: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1
+};
+
   return (
     <div className="main">
       <Header name={session.user.name} img={session.user.image} closeSession={signOut}/>
       <div className="section">
         <h3 className="section-title">Despesas atuais</h3>
-        <div data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
+        <Slider {...settings}>
           {
             expenses.map( expense => (
-              <Board expense={expense}/>
+              <Board key={expense.id} expense={expense}/>
             ))
           }
-        </div>
+        </Slider>
       </div>
       <div className="section">
         <h3 className="section-title">Cadastrar Novas Despesas</h3>

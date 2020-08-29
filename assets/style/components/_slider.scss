@@ -1,0 +1,17 @@
+.slick-slider {
+  .slick-dots {
+    .slick-active {
+      button {
+        &::before {
+          color: $white;
+        }
+      }  
+    }
+
+    button {
+      &::before {
+        color: $gray-500;
+      }
+    }
+  }
+}

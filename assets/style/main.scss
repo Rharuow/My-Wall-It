@@ -4,16 +4,10 @@
 
 @import 'common/global';
 
-$slick-font-path: "~slick-carousel/slick/fonts/";
-$slick-font-family: "slick";
-$slick-loader-path: "~slick-carousel/slick/";
-$slick-arrow-color: $black;
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 
 @import "~slick-carousel/slick/slick";
 @import "~slick-carousel/slick/slick-theme";
-
-
-$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~@fortawesome/fontawesome-free/scss/brands';
@@ -25,6 +19,7 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import 'components/avatar';
 @import 'components/board';
 @import 'components/header';
+@import 'components/slider';
 
 @import 'layout/signIn';
 @import 'layout/app';
