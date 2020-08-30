@@ -6,8 +6,8 @@ export default function Board(props) {
   return (
     <>
       <div className="board shadow">
-        { props.expense.title === "aluguel" &&
-          <Rent info={props.expense} />
+        { props.debt.title === "aluguel" &&
+          <Rent info={props.debt} />
         }
       </div>
     </>

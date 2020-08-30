@@ -1,7 +1,7 @@
 import React from 'react'
 import moment from 'moment'
 
-import formaMoney from '../../utils/formatMoney'
+import formaMoney from '../../assets/scripts/utils/formatMoney'
 import Avatar from '../Avatar'
 
 
