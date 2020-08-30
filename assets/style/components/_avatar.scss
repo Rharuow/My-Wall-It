@@ -4,6 +4,22 @@
   overflow: hidden;
   border-radius: 3.4375rem;
 
+  &.border-paid {
+    border: 5px solid $success;
+  }
+  
+  &.border-pending {
+    border: 5px solid $warning;
+  }
+  
+  &.border-late {
+    border: 5px solid $danger;
+  }
+  
+  &.border-default {
+    border: 3px solid $black;
+  }
+
   img {
     width: 100%;
   }

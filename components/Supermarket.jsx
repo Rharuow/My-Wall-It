@@ -9,10 +9,16 @@ import { status, icon, debtName } from '../assets/scripts/utils/translate'
 export default function Supermarket(props) {
 
   const [ showTable, setShowTable ] = useState(false)
+  const [ showDetails, setShowDetails ] = useState(false)
 
   const toogleTable = () => {
-    const temShowTable = !showTable
-    setShowTable(temShowTable)
+    const tempShowTable = !showTable
+    setShowTable(tempShowTable)
+  }
+
+  const toogleDetails = () => {
+    const tempShowDetails = !showDetails
+    setShowDetails(tempShowDetails)
   }
 
   return (
@@ -26,11 +32,18 @@ export default function Supermarket(props) {
           <li className="list-group-item list-group-item-dark d-flex justify-content-between">Total: <strong className="text-center">R$ {formatMoney(props.info.totalValue)}</strong></li>
           <li className="list-group-item list-group-item-dark d-flex justify-content-between">Sua parte: <strong className="text-center">R$ {formatMoney(props.info.subTotal)}</strong></li>
           <li className="list-group-item list-group-item-dark d-flex justify-content-between">Pagar para: <strong className="text-center">{props.info.own}</strong></li>
-          <li className="list-group-item list-group-item-dark d-flex justify-content-between">Data do pagamento: <strong className="text-center">{props.info.payDay}</strong></li>
-          <li className="list-group-item list-group-item-dark d-flex justify-content-between">Dia do pagamento: <strong className="text-center">{props.info.weekDay}</strong></li>
-          <li className="list-group-item list-group-item-dark d-flex justify-content-between">Vencimento: <strong className="text-center">{props.info.dueDate === "" ? "--/--/--" : props.info.dueDate}</strong></li>
-          <li className="list-group-item list-group-item-dark d-flex justify-content-center" id="dropdown-products" onClick={toogleTable}><strong className="text-center">Produtos <i className={`fas fa-angle-${showTable ? 'up' : 'down'}`}></i></strong></li>
-          { showTable &&
+          <li className={`list-group-item d-flex justify-content-center fas fa-chevron-${showDetails ? 'up' : 'down'}`} onClick={toogleDetails}></li>
+          {
+            showDetails &&
+            <FadeIn delay={100} transitionDuration={800}>
+              <li className="list-group-item list-group-item-dark d-flex justify-content-between">Data do pagamento: <strong className="text-center">{props.info.payDay}</strong></li>
+              <li className="list-group-item list-group-item-dark d-flex justify-content-between">Dia do pagamento: <strong className="text-center">{props.info.weekDay}</strong></li>
+              <li className="list-group-item list-group-item-dark d-flex justify-content-between">Vencimento: <strong className="text-center">{props.info.dueDate === "" ? "--/--/--" : props.info.dueDate}</strong></li>
+              <li className="list-group-item list-group-item-dark d-flex justify-content-center" id="dropdown-products" onClick={toogleTable}><strong className="text-center">Produtos <i className={`fas fa-angle-${showTable ? 'up' : 'down'}`}></i></strong></li>
+            </FadeIn>
+          }
+          { 
+            showTable &&
             <FadeIn delay={100} transitionDuration={800}>
               <table className="table table-striped table-dark m-0">
                 <thead>
@@ -63,7 +76,7 @@ export default function Supermarket(props) {
       <div className="board-footer mt-2">
         <h5 className="footer-title text-white">Participantes</h5>
         <div className="footer-participants d-flex justify-content-around">
-          {props.info.participants.map( (participant, index) => <Avatar key={index} img={participant}/>)}
+          {props.info.participants.map( (participant, index) => <Avatar  key={index} img={participant["photo"]} status={props.info.own === participant["name"] ? "paid" : participant["status"] }/>)}
         </div>
       </div>
     </>

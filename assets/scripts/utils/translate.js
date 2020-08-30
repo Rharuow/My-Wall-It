@@ -46,3 +46,16 @@ export const icon = title => {
       return "fas fa-hand-holding-usd"
   }
 }
+
+export const borderColor = kind => {
+  switch (kind) {
+    case "paid":
+      return "success"
+    case "pending":
+      return "warning"
+    case "late":
+      return "danger"
+    default:
+      return "default"
+  }
+}

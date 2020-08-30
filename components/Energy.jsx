@@ -25,7 +25,7 @@ export default function Energy(props) {
       <div className="board-footer mt-2">
         <h5 className="footer-title text-white">Participantes</h5>
         <div className="footer-participants d-flex justify-content-around">
-          {props.info.participants.map( (participant, index) => <Avatar key={index} img={participant}/>)}
+          {props.info.participants.map( (participant, index) => <Avatar  key={index} img={participant["photo"]} status={props.info.own === participant["name"] ? "paid" : participant["status"] }/>)}
         </div>
       </div>
     </>
