@@ -6,7 +6,8 @@
       "name": "Beréu",
       "totalValue": 700,
       "subTotal": 220,
-      "status": "paid",
+      "dueDate": "10/09/2020",
+      "status": "pending",
       "own": "Arthur Cesar",
       "participants": [
         "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E7",
@@ -18,6 +19,8 @@
       "title": "water",
       "totalValue": 120,
       "subTotal": 40,
+      "payDay": "10/08/2020",
+      "dueDate": "",
       "status": "pending",
       "own": "Arthur Cesar",
       "participants": [
@@ -30,6 +33,8 @@
       "title": "energy",
       "totalValue": 120,
       "subTotal": 40,
+      "payDay": "10/08/2020",
+      "dueDate": "",
       "status": "late",
       "own": "Arthur Cesar",
       "participants": [
@@ -42,6 +47,8 @@
       "title": "gas",
       "totalValue": 120,
       "subTotal": 40,
+      "payDay": "10/08/2020",
+      "dueDate": "10/09/2020",
       "status": "paid",
       "own": "Arthur Cesar",
       "participants": [
@@ -54,6 +61,8 @@
       "title": "internet",
       "totalValue": 73,
       "subTotal": 24.3,
+      "payDay": "10/08/2020",
+      "dueDate": "",
       "status": "paid",
       "own": "Harysson Soares",
       "participants": [
@@ -64,25 +73,34 @@
     {
       "id": 6,
       "title": "supermarket",
+      "local": "ASSAI",
       "totalValue": 73,
       "subTotal": 24.3,
+      "payDay": "10/08/2020",
+      "weekDay": "Saturday",
+      "time": "5:25:03",
+      "dueDate": "",
       "itens": [
         {
+          "id": 1,
           "name": "tomate",
           "price": 5.70,
           "amount": 0.6
         },
         {
+          "id": 2,
           "name": "azeite",
           "price": 15.70,
           "amount": 1
         },
         {
+          "id": 3,
           "name": "arroz",
           "price": 4.10,
           "amount": 1
         },
         {
+          "id": 4,
           "name": "Frango",
           "price": 8.10,
           "amount": 6.1

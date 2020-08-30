@@ -15,6 +15,22 @@
     }
   }
 
+  .board-body {
+    table {
+      thead {
+        th {
+          font-weight: 300;
+          font-size: .8rem;
+        }
+      }
+      tbody {
+        td {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
   .board-footer {
     .footer-participants {
       .participants-info {
