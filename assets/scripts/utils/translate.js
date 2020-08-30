@@ -30,17 +30,17 @@ export const debtName = name => {
 
 export const icon = title => {
   switch (title) {
-    case "aluguel":
+    case "rent":
       return "fas fa-house-user"
-    case "agua":
+    case "water":
       return "fas fa-faucet"
-    case "luz":
+    case "energy":
       return "fas fa-lightbulb"
     case "internet":
       return "fas fa-wifi"
     case "gas":
       return "fas fa-burn"
-    case "compras":
+    case "supermarket":
       return "fas fa-shopping-cart"
     default:
       return "fas fa-hand-holding-usd"
