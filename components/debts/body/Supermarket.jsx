@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import FadeIn from 'react-fade-in';
 
-import formatMoney from '../assets/scripts/utils/formatMoney'
-import Avatar from './Avatar'
+import formatMoney from '../../../assets/scripts/utils/formatMoney'
 
-import { status, icon, debtName } from '../assets/scripts/utils/translate'
+import Header from '../Header'
+import Footer from '../Footer'
+
+import { status } from '../../../assets/scripts/utils/translate'
 
 export default function Supermarket(props) {
 
@@ -23,9 +25,7 @@ export default function Supermarket(props) {
 
   return (
     <>
-      <div className="board-header mt-2 d-flex justify-content-center">
-        <h4 className="header-title text-white"><i className={`${icon(props.info.title)} header-title-icon`}></i>{debtName(props.info.title)}</h4>
-      </div>
+      <Header title={props.info.title}/>
       <div className="board-body mt-2">
         <ul className="list-group">
           <li className="list-group-item list-group-item-dark d-flex justify-content-between">Local: <strong className="text-center">{props.info.local}</strong></li>
@@ -73,12 +73,7 @@ export default function Supermarket(props) {
           <li className="list-group-item list-group-item-dark d-flex justify-content-between">Status: <span className={`bge bge-${props.info.status}`}>{status(props.info.status)}</span></li>
         </ul>
       </div>
-      <div className="board-footer mt-2">
-        <h5 className="footer-title text-white">Participantes</h5>
-        <div className="footer-participants d-flex justify-content-around">
-          {props.info.participants.map( (participant, index) => <Avatar  key={index} img={participant["photo"]} status={props.info.own === participant["name"] ? "paid" : participant["status"] }/>)}
-        </div>
-      </div>
+      <Footer participants={props.info.participants} own={props.info.own}/>
     </>
   )
 }

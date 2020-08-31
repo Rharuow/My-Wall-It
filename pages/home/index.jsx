@@ -32,8 +32,11 @@ const Home =() => {
           }
         </Slider>
       </div>
-      <div className="section">
+      <div className="section mt-2">
         <h3 className="section-title">Cadastrar Novas Despesas</h3>
+        <Slider {...settings}>
+          
+        </Slider>
       </div>
     </div>
   )
