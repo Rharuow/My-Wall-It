@@ -10,8 +10,8 @@ import { status } from '../../../assets/scripts/utils/translate'
 
 export default function Supermarket(props) {
 
-  const [ showTable, setShowTable ] = useState(false)
-  const [ showDetails, setShowDetails ] = useState(false)
+  const [showTable, setShowTable] = useState(false)
+  const [showDetails, setShowDetails] = useState(false)
 
   const toogleTable = () => {
     const tempShowTable = !showTable
@@ -25,7 +25,7 @@ export default function Supermarket(props) {
 
   return (
     <>
-      <Header title={props.info.title}/>
+      <Header title={props.info.title} />
       <div className="board-body mt-2">
         <ul className="list-group">
           <li className="list-group-item list-group-item-dark d-flex justify-content-between">Local: <strong className="text-center">{props.info.local}</strong></li>
@@ -42,7 +42,7 @@ export default function Supermarket(props) {
               <li className="list-group-item list-group-item-dark d-flex justify-content-center" id="dropdown-products" onClick={toogleTable}><strong className="text-center">Produtos <i className={`fas fa-angle-${showTable ? 'up' : 'down'}`}></i></strong></li>
             </FadeIn>
           }
-          { 
+          {
             showTable &&
             <FadeIn delay={100} transitionDuration={800}>
               <table className="table table-striped table-dark m-0">
@@ -55,17 +55,17 @@ export default function Supermarket(props) {
                   </tr>
                 </thead>
                 <tbody>
-                {
-                  props.info.itens.map( item => (
-                    <tr key={item.id}>
-                      <td className="text-center">{item.name}</td>
-                      <td className="text-center">R$ {formatMoney(item.price)}</td>
-                      <td className="text-center">{item.amount}</td>
-                      <td className="text-center">R$ {formatMoney(item.amount * item.price)}</td>
-                    </tr>
+                  {
+                    props.info.itens.map(item => (
+                      <tr key={item.id}>
+                        <td className="text-center">{item.name}</td>
+                        <td className="text-center">R$ {formatMoney(item.price)}</td>
+                        <td className="text-center">{item.amount}</td>
+                        <td className="text-center">R$ {formatMoney(item.amount * item.price)}</td>
+                      </tr>
                     )
-                  )
-                }
+                    )
+                  }
                 </tbody>
               </table>
             </FadeIn>
@@ -73,7 +73,7 @@ export default function Supermarket(props) {
           <li className="list-group-item list-group-item-dark d-flex justify-content-between">Status: <span className={`bge bge-${props.info.status}`}>{status(props.info.status)}</span></li>
         </ul>
       </div>
-      <Footer participants={props.info.participants} own={props.info.own}/>
+      <Footer participants={props.info.participants} own={props.info.own} />
     </>
   )
 }

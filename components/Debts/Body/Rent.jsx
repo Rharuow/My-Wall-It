@@ -11,7 +11,7 @@ export default function Rent(props) {
 
   return (
     <>
-      <Header title={props.info.title}/>
+      <Header title={props.info.title} />
       <div className="board-body mt-2">
         <ul className="list-group">
           <li className="list-group-item list-group-item-dark d-flex justify-content-between">Residência: <strong className="text-center">{props.info.name}</strong></li>
@@ -22,7 +22,7 @@ export default function Rent(props) {
           <li className="list-group-item list-group-item-dark d-flex justify-content-between">Status: <span className={`bge bge-${props.info.status}`}>{status(props.info.status)}</span></li>
         </ul>
       </div>
-      <Footer participants={props.info.participants} own={props.info.own}/>
+      <Footer participants={props.info.participants} own={props.info.own} />
     </>
   )
 }
