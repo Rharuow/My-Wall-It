@@ -1,11 +1,11 @@
 import React from 'react'
 
-import Rent from './debts/body/Rent'
-import Water from './debts/body/Water'
-import Energy from './debts/body/Energy'
-import Gas from './debts/body/Gas'
-import Internet from './debts/body/Internet'
-import Supermarket from './debts/body/Supermarket'
+import Rent from '../Debts/Body/Rent'
+import Water from '../Debts/Body/Water'
+import Energy from '../Debts/Body/Energy'
+import Gas from '../Debts/Body/Gas'
+import Internet from '../Debts/Body/Internet'
+import Supermarket from '../Debts/Body/Supermarket'
 
 export default function Board(props) {
   return (

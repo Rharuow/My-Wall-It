@@ -10,7 +10,7 @@ export default function Header(props) {
     <>
       <div className="header shadow">
         <div className="header-topbar d-flex justify-content-between align-items-center">
-          <Avatar img={props.img}/>
+          <Avatar img={props.img} />
           <h1 className="topbar-username text-light">{props.name}</h1>
           <button className="btn btn-danger rounded" onClick={props.closeSession}><i className="fas fa-sign-out-alt"></i></button>
         </div>
