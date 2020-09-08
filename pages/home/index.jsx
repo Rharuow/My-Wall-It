@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import PropTypes from 'prop-types'
 import { signOut, useSession } from 'next-auth/client'
 import Slider from "react-slick";
 
@@ -40,6 +41,10 @@ const Home = () => {
       </div>
     </div>
   )
+}
+
+Home.propTypes = {
+
 }
 
 export default Home

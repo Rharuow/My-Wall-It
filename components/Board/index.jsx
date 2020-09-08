@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Rent from '../Debts/Body/Rent'
 import Water from '../Debts/Body/Water'
@@ -7,35 +8,41 @@ import Gas from '../Debts/Body/Gas'
 import Internet from '../Debts/Body/Internet'
 import Supermarket from '../Debts/Body/Supermarket'
 
-export default function Board(props) {
+const Index = ({ debt }) => {
   return (
     <>
       <div className="board shadow d-flex flex-column justify-content-center align-item-center">
         {
-          props.debt.title === "rent" &&
-          <Rent info={props.debt} />
+          debt.title === "rent" &&
+          <Rent info={debt} />
         }
         {
-          props.debt.title === "water" &&
-          <Water info={props.debt} />
+          debt.title === "water" &&
+          <Water info={debt} />
         }
         {
-          props.debt.title === "energy" &&
-          <Energy info={props.debt} />
+          debt.title === "energy" &&
+          <Energy info={debt} />
         }
         {
-          props.debt.title === "gas" &&
-          <Gas info={props.debt} />
+          debt.title === "gas" &&
+          <Gas info={debt} />
         }
         {
-          props.debt.title === "internet" &&
-          <Internet info={props.debt} />
+          debt.title === "internet" &&
+          <Internet info={debt} />
         }
         {
-          props.debt.title === "supermarket" &&
-          <Supermarket info={props.debt} />
+          debt.title === "supermarket" &&
+          <Supermarket info={debt} />
         }
       </div>
     </>
   )
 }
+
+Index.propTypes = {
+  debt: PropTypes.object
+}
+
+export default Index

@@ -1,11 +1,19 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export default function Avatar(props) {
+const Avatar = ({ status, img }) => {
   return (
     <>
-      <div className={`avatar border-${props.status !== undefined ? props.status : 'default'}`}>
-        <img src={props.img} alt="avatar" />
+      <div className={`avatar border-${status !== undefined ? status : 'default'}`}>
+        <img src={img} alt="avatar" />
       </div>
     </>
   )
 }
+
+Avatar.propTypes = {
+  status: PropTypes.string,
+  img: PropTypes.string
+}
+
+export default Avatar
