@@ -7,6 +7,7 @@ import Energy from '../Debts/Body/Energy'
 import Gas from '../Debts/Body/Gas'
 import Internet from '../Debts/Body/Internet'
 import Supermarket from '../Debts/Body/Supermarket'
+import Generic from '../Debts/Body/Generic/'
 
 const Index = ({ debt }) => {
   return (
@@ -35,6 +36,10 @@ const Index = ({ debt }) => {
         {
           debt.title === "supermarket" &&
           <Supermarket info={debt} />
+        }
+        {
+          debt.title === "others" &&
+          <Generic info={debt} />
         }
       </div>
     </>

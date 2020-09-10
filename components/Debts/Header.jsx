@@ -3,17 +3,18 @@ import PropTypes from 'prop-types'
 
 import { icon, debtName } from '../../assets/scripts/utils/translate'
 
-const Header = ({ title }) => {
+const Header = ({ title, name }) => {
 
   return (
     <div className="board-header mt-2 d-flex justify-content-center">
-      <h4 className="header-title text-white"><i className={`${icon(title)} header-title-icon`}></i>{debtName(title)}</h4>
+      <h4 className="header-title text-white text-center"><i className={`${icon(title)} header-title-icon`}></i><br />{name ? name : debtName(title)}</h4>
     </div>
   )
 }
 
 Header.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
+  name: PropTypes.string
 }
 
 export default Header

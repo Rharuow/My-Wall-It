@@ -1,4 +1,4 @@
-export const status = state => {
+export const getStatus = state => {
   switch (state) {
     case "paid":
       return "Pago"

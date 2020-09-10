@@ -8,7 +8,7 @@ import formatMoney from '../../../assets/scripts/utils/formatMoney'
 import Header from '../Header'
 import Footer from '../Footer'
 
-import { status } from '../../../assets/scripts/utils/translate'
+import { getStatus } from '../../../assets/scripts/utils/translate'
 
 const Supermarket = ({ info }) => {
 
@@ -72,7 +72,7 @@ const Supermarket = ({ info }) => {
               </table>
             </FadeIn>
           }
-          <li className="list-group-item list-group-item-dark d-flex justify-content-between">Status: <span className={`bge bge-${info.status}`}>{status(info.status)}</span></li>
+          <li className="list-group-item list-group-item-dark d-flex justify-content-between">Status: <span className={`bge bge-${info.status}`}>{getStatus(info.status)}</span></li>
         </ul>
       </div>
       <Footer participants={info.participants} own={info.own} />

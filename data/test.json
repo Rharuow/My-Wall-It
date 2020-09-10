@@ -259,39 +259,11 @@
       "id": 8,
       "title": "others",
       "name": "Controles do portão",
-      "local": "ASSAI",
+      "type": "default",
       "totalValue": 104,
       "subTotal": 24.3,
       "createdAt": "10/08/2020",
-      "weekDay": "Saturday",
-      "time": "5:25:03",
       "dueDate": "",
-      "itens": [
-        {
-          "id": 1,
-          "name": "Energético",
-          "price": 5.99,
-          "amount": 1
-        },
-        {
-          "id": 2,
-          "name": "Leite",
-          "price": 15.70,
-          "amount": 1
-        },
-        {
-          "id": 3,
-          "name": "Suco",
-          "price": 1.10,
-          "amount": 1
-        },
-        {
-          "id": 4,
-          "name": "Danone",
-          "price": 2.10,
-          "amount": 2
-        }
-      ],
       "status": "paid",
       "own": "Harysson Soares",
       "participants": [
