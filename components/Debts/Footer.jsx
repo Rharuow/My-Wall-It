@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Slider from 'react-slick'
 
 import formatMoney from '../../assets/scripts/utils/formatMoney'
 import Avatar from '../Avatar'
 
 
-const Footer = ({ participants, own }) => {
+const Footer = ({ participants, own, slider }) => {
   return (
     <div className="board-footer mt-2">
       <h5 className="footer-title text-white">Participantes</h5>
@@ -14,7 +15,7 @@ const Footer = ({ participants, own }) => {
           <div key={`div${index}`} className="footer-participants-info">
             <Avatar key={index} img={participant["photo"]} className="m-auto" status={own === participant["name"] ? "paid" : participant["status"]}
             />
-            <span key={`span${index}`} className={`text-center lead text-${own === participant["name"] ? "paid" : participant["status"]}`}><strong>R$ {formatMoney(participant["value"])}</strong></span>
+            <span key={`span${index}`} className={`text-center text-${own === participant["name"] ? "paid" : participant["status"]}`}><strong>R$ {formatMoney(participant["value"])}</strong></span>
           </div>
         )}
       </div>
@@ -25,6 +26,7 @@ const Footer = ({ participants, own }) => {
 Footer.propTypes = {
   participants: PropTypes.array,
   own: PropTypes.string,
+  slider: PropTypes.bool,
 }
 
 export default Footer

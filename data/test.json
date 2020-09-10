@@ -12,6 +12,14 @@
       "own": "Arthur Cesar",
       "participants": [
         {
+          "id": 1,
+          "name": "Harysson Soares",
+          "email": "haryssonsoares@gmail.com",
+          "status": "pending",
+          "value": 220,
+          "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
+        },
+        {
           "id": 2,
           "name": "Clara Yasmim",
           "email": "clara@gmail.com",
@@ -24,7 +32,7 @@
           "name": "Arthur Cesar",
           "email": "arthur@gmail.com",
           "status": "pending",
-          "value": 200,
+          "value": 280,
           "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
         }
       ]
@@ -39,6 +47,14 @@
       "status": "pending",
       "own": "Arthur Cesar",
       "participants": [
+        {
+          "id": 1,
+          "name": "Harysson Soares",
+          "email": "haryssonsoares@gmail.com",
+          "status": "paid",
+          "value": 220,
+          "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
+        },
         {
           "id": 2,
           "name": "Clara Yasmim",
@@ -68,6 +84,14 @@
       "own": "Arthur Cesar",
       "participants": [
         {
+          "id": 1,
+          "name": "Harysson Soares",
+          "email": "haryssonsoares@gmail.com",
+          "status": "pending",
+          "value": 220,
+          "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
+        },
+        {
           "id": 2,
           "name": "Clara Yasmim",
           "email": "clara@gmail.com",
@@ -92,9 +116,17 @@
       "subTotal": 40,
       "createdAt": "10/08/2020",
       "dueDate": "10/09/2020",
-      "status": "paid",
+      "status": "late",
       "own": "Arthur Cesar",
       "participants": [
+        {
+          "id": 1,
+          "name": "Harysson Soares",
+          "email": "haryssonsoares@gmail.com",
+          "status": "late",
+          "value": 220,
+          "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
+        },
         {
           "id": 2,
           "name": "Clara Yasmim",
@@ -123,6 +155,14 @@
       "status": "paid",
       "own": "Harysson Soares",
       "participants": [
+        {
+          "id": 1,
+          "name": "Harysson Soares",
+          "email": "haryssonsoares@gmail.com",
+          "status": "pending",
+          "value": 220,
+          "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
+        },
         {
           "id": 2,
           "name": "Clara Yasmim",
@@ -181,6 +221,14 @@
       "own": "Harysson Soares",
       "participants": [
         {
+          "id": 1,
+          "name": "Harysson Soares",
+          "email": "haryssonsoares@gmail.com",
+          "status": "pending",
+          "value": 220,
+          "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
+        },
+        {
           "id": 2,
           "name": "Clara Yasmim",
           "email": "clara@gmail.com",
@@ -238,6 +286,14 @@
       "own": "Harysson Soares",
       "participants": [
         {
+          "id": 1,
+          "name": "Harysson Soares",
+          "email": "haryssonsoares@gmail.com",
+          "status": "pending",
+          "value": 220,
+          "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
+        },
+        {
           "id": 2,
           "name": "Clara Yasmim",
           "email": "clara@gmail.com",
@@ -268,6 +324,14 @@
       "own": "Harysson Soares",
       "participants": [
         {
+          "id": 1,
+          "name": "Harysson Soares",
+          "email": "haryssonsoares@gmail.com",
+          "status": "pending",
+          "value": 220,
+          "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
+        },
+        {
           "id": 2,
           "name": "Clara Yasmim",
           "email": "clara@gmail.com",
@@ -291,19 +355,28 @@
       "name": "NetFlix",
       "type": "turn",
       "totalValue": 45,
-      "subTotal": 24.3,
       "createdAt": "10/08/2020",
+      "currentMonth": "September",
       "dueDate": "",
       "status": "paid",
       "own": "Arthur Cesar",
+      "turn": "Harysson Soares",
       "participants": [
+        {
+          "id": 1,
+          "name": "Harysson Soares",
+          "email": "haryssonsoares@gmail.com",
+          "status": "pending",
+          "value": 220,
+          "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
+        },
         {
           "id": 2,
           "name": "Gabriel Dias",
           "email": "gabrieldias@gmail.com",
           "status": "pending",
           "value": 45,
-          "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E7"
+          "photo": "https://tmssl.akamaized.net/images/portrait/originals/336474-1547633916.jpg"
         },
         {
           "id": 3,
