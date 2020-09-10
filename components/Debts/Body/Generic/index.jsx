@@ -45,7 +45,7 @@ const Generic = ({ info }) => {
           />
         }
       </div>
-      <Footer participants={info.participants} slider={info.type === "turn" ? true : false} own={info.own} />
+      <Footer participants={info.participants} turn={info.turn} own={info.own} />
     </>
   )
 }

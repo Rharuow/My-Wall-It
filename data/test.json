@@ -1,392 +1,394 @@
 {
-  "debt": [
-    {
-      "id": 1,
-      "title": "rent",
-      "name": "Beréu",
-      "totalValue": 700,
-      "subTotal": 220,
-      "createdAt": "10/06/2020",
-      "dueDate": "10/09/2020",
-      "status": "pending",
-      "own": "Arthur Cesar",
-      "participants": [
-        {
-          "id": 1,
-          "name": "Harysson Soares",
-          "email": "haryssonsoares@gmail.com",
-          "status": "pending",
-          "value": 220,
-          "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
-        },
-        {
-          "id": 2,
-          "name": "Clara Yasmim",
-          "email": "clara@gmail.com",
-          "status": "paid",
-          "value": 200,
-          "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E7"
-        },
-        {
-          "id": 3,
-          "name": "Arthur Cesar",
-          "email": "arthur@gmail.com",
-          "status": "pending",
-          "value": 280,
-          "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "title": "water",
-      "totalValue": 120,
-      "subTotal": 40,
-      "createdAt": "10/08/2020",
-      "dueDate": "",
-      "status": "pending",
-      "own": "Arthur Cesar",
-      "participants": [
-        {
-          "id": 1,
-          "name": "Harysson Soares",
-          "email": "haryssonsoares@gmail.com",
-          "status": "paid",
-          "value": 220,
-          "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
-        },
-        {
-          "id": 2,
-          "name": "Clara Yasmim",
-          "email": "clara@gmail.com",
-          "status": "paid",
-          "value": 200,
-          "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E7"
-        },
-        {
-          "id": 3,
-          "name": "Arthur Cesar",
-          "email": "arthur@gmail.com",
-          "status": "pending",
-          "value": 200,
-          "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "title": "energy",
-      "totalValue": 120,
-      "subTotal": 40,
-      "createdAt": "10/08/2020",
-      "dueDate": "",
-      "status": "late",
-      "own": "Arthur Cesar",
-      "participants": [
-        {
-          "id": 1,
-          "name": "Harysson Soares",
-          "email": "haryssonsoares@gmail.com",
-          "status": "pending",
-          "value": 220,
-          "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
-        },
-        {
-          "id": 2,
-          "name": "Clara Yasmim",
-          "email": "clara@gmail.com",
-          "status": "late",
-          "value": 200,
-          "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E7"
-        },
-        {
-          "id": 3,
-          "name": "Arthur Cesar",
-          "email": "arthur@gmail.com",
-          "status": "pending",
-          "value": 200,
-          "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "title": "gas",
-      "totalValue": 120,
-      "subTotal": 40,
-      "createdAt": "10/08/2020",
-      "dueDate": "10/09/2020",
-      "status": "late",
-      "own": "Arthur Cesar",
-      "participants": [
-        {
-          "id": 1,
-          "name": "Harysson Soares",
-          "email": "haryssonsoares@gmail.com",
-          "status": "late",
-          "value": 220,
-          "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
-        },
-        {
-          "id": 2,
-          "name": "Clara Yasmim",
-          "email": "clara@gmail.com",
-          "status": "paid",
-          "value": 200,
-          "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E7"
-        },
-        {
-          "id": 3,
-          "name": "Arthur Cesar",
-          "email": "arthur@gmail.com",
-          "status": "late",
-          "value": 200,
-          "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "title": "internet",
-      "totalValue": 73,
-      "subTotal": 24.3,
-      "createdAt": "10/08/2020",
-      "dueDate": "",
-      "status": "paid",
-      "own": "Harysson Soares",
-      "participants": [
-        {
-          "id": 1,
-          "name": "Harysson Soares",
-          "email": "haryssonsoares@gmail.com",
-          "status": "pending",
-          "value": 220,
-          "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
-        },
-        {
-          "id": 2,
-          "name": "Clara Yasmim",
-          "email": "clara@gmail.com",
-          "status": "paid",
-          "value": 200,
-          "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E7"
-        },
-        {
-          "id": 3,
-          "name": "Arthur Cesar",
-          "email": "arthur@gmail.com",
-          "status": "paid",
-          "value": 200,
-          "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "title": "supermarket",
-      "local": "ASSAI",
-      "totalValue": 73,
-      "subTotal": 24.3,
-      "createdAt": "10/08/2020",
-      "weekDay": "Saturday",
-      "time": "5:25:03",
-      "dueDate": "",
-      "itens": [
-        {
-          "id": 1,
-          "name": "tomate",
-          "price": 5.70,
-          "amount": 0.6
-        },
-        {
-          "id": 2,
-          "name": "azeite",
-          "price": 15.70,
-          "amount": 1
-        },
-        {
-          "id": 3,
-          "name": "arroz",
-          "price": 4.10,
-          "amount": 1
-        },
-        {
-          "id": 4,
-          "name": "Frango",
-          "price": 8.10,
-          "amount": 6.1
-        }
-      ],
-      "status": "paid",
-      "own": "Harysson Soares",
-      "participants": [
-        {
-          "id": 1,
-          "name": "Harysson Soares",
-          "email": "haryssonsoares@gmail.com",
-          "status": "pending",
-          "value": 220,
-          "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
-        },
-        {
-          "id": 2,
-          "name": "Clara Yasmim",
-          "email": "clara@gmail.com",
-          "status": "pending",
-          "value": 200,
-          "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E7"
-        },
-        {
-          "id": 3,
-          "name": "Arthur Cesar",
-          "email": "arthur@gmail.com",
-          "status": "pending",
-          "value": 200,
-          "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "title": "supermarket",
-      "local": "ASSAI",
-      "totalValue": 104,
-      "subTotal": 24.3,
-      "createdAt": "10/08/2020",
-      "weekDay": "Saturday",
-      "time": "5:25:03",
-      "dueDate": "",
-      "itens": [
-        {
-          "id": 1,
-          "name": "Energético",
-          "price": 5.99,
-          "amount": 1
-        },
-        {
-          "id": 2,
-          "name": "Leite",
-          "price": 15.70,
-          "amount": 1
-        },
-        {
-          "id": 3,
-          "name": "Suco",
-          "price": 1.10,
-          "amount": 1
-        },
-        {
-          "id": 4,
-          "name": "Danone",
-          "price": 2.10,
-          "amount": 2
-        }
-      ],
-      "status": "paid",
-      "own": "Harysson Soares",
-      "participants": [
-        {
-          "id": 1,
-          "name": "Harysson Soares",
-          "email": "haryssonsoares@gmail.com",
-          "status": "pending",
-          "value": 220,
-          "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
-        },
-        {
-          "id": 2,
-          "name": "Clara Yasmim",
-          "email": "clara@gmail.com",
-          "status": "pending",
-          "value": 200,
-          "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E7"
-        },
-        {
-          "id": 3,
-          "name": "Arthur Cesar",
-          "email": "arthur@gmail.com",
-          "status": "late",
-          "value": 200,
-          "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "title": "others",
-      "name": "Controles do portão",
-      "type": "default",
-      "totalValue": 104,
-      "subTotal": 24.3,
-      "createdAt": "10/08/2020",
-      "dueDate": "",
-      "status": "paid",
-      "own": "Harysson Soares",
-      "participants": [
-        {
-          "id": 1,
-          "name": "Harysson Soares",
-          "email": "haryssonsoares@gmail.com",
-          "status": "pending",
-          "value": 220,
-          "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
-        },
-        {
-          "id": 2,
-          "name": "Clara Yasmim",
-          "email": "clara@gmail.com",
-          "status": "pending",
-          "value": 200,
-          "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E7"
-        },
-        {
-          "id": 3,
-          "name": "Arthur Cesar",
-          "email": "arthur@gmail.com",
-          "status": "late",
-          "value": 200,
-          "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "title": "others",
-      "name": "NetFlix",
-      "type": "turn",
-      "totalValue": 45,
-      "createdAt": "10/08/2020",
-      "currentMonth": "September",
-      "dueDate": "",
-      "status": "paid",
-      "own": "Arthur Cesar",
-      "turn": "Harysson Soares",
-      "participants": [
-        {
-          "id": 1,
-          "name": "Harysson Soares",
-          "email": "haryssonsoares@gmail.com",
-          "status": "pending",
-          "value": 220,
-          "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
-        },
-        {
-          "id": 2,
-          "name": "Gabriel Dias",
-          "email": "gabrieldias@gmail.com",
-          "status": "pending",
-          "value": 45,
-          "photo": "https://tmssl.akamaized.net/images/portrait/originals/336474-1547633916.jpg"
-        },
-        {
-          "id": 3,
-          "name": "Arthur Cesar",
-          "email": "arthur@gmail.com",
-          "status": "late",
-          "value": 45,
-          "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
-        }
-      ]
+  "user": {
+    "debt": [
+      {
+        "id": 1,
+        "title": "rent",
+        "name": "Beréu",
+        "totalValue": 700,
+        "subTotal": 220,
+        "createdAt": "10/06/2020",
+        "dueDate": "10/09/2020",
+        "status": "pending",
+        "own": "Arthur Cesar",
+        "participants": [
+          {
+            "id": 1,
+            "name": "Harysson Soares",
+            "email": "haryssonsoares@gmail.com",
+            "status": "pending",
+            "value": 220,
+            "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
+          },
+          {
+            "id": 2,
+            "name": "Clara Yasmim",
+            "email": "clara@gmail.com",
+            "status": "paid",
+            "value": 200,
+            "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E7"
+          },
+          {
+            "id": 3,
+            "name": "Arthur Cesar",
+            "email": "arthur@gmail.com",
+            "status": "paid",
+            "value": 280,
+            "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "water",
+        "totalValue": 120,
+        "subTotal": 40,
+        "createdAt": "10/08/2020",
+        "dueDate": "",
+        "status": "paid",
+        "own": "Arthur Cesar",
+        "participants": [
+          {
+            "id": 1,
+            "name": "Harysson Soares",
+            "email": "haryssonsoares@gmail.com",
+            "status": "paid",
+            "value": 220,
+            "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
+          },
+          {
+            "id": 2,
+            "name": "Clara Yasmim",
+            "email": "clara@gmail.com",
+            "status": "paid",
+            "value": 200,
+            "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E7"
+          },
+          {
+            "id": 3,
+            "name": "Arthur Cesar",
+            "email": "arthur@gmail.com",
+            "status": "paid",
+            "value": 200,
+            "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "energy",
+        "totalValue": 120,
+        "subTotal": 40,
+        "createdAt": "10/08/2020",
+        "dueDate": "",
+        "status": "late",
+        "own": "Arthur Cesar",
+        "participants": [
+          {
+            "id": 1,
+            "name": "Harysson Soares",
+            "email": "haryssonsoares@gmail.com",
+            "status": "pending",
+            "value": 220,
+            "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
+          },
+          {
+            "id": 2,
+            "name": "Clara Yasmim",
+            "email": "clara@gmail.com",
+            "status": "late",
+            "value": 200,
+            "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E7"
+          },
+          {
+            "id": 3,
+            "name": "Arthur Cesar",
+            "email": "arthur@gmail.com",
+            "status": "paid",
+            "value": 200,
+            "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "gas",
+        "totalValue": 120,
+        "subTotal": 40,
+        "createdAt": "10/08/2020",
+        "dueDate": "10/09/2020",
+        "status": "late",
+        "own": "Arthur Cesar",
+        "participants": [
+          {
+            "id": 1,
+            "name": "Harysson Soares",
+            "email": "haryssonsoares@gmail.com",
+            "status": "late",
+            "value": 220,
+            "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
+          },
+          {
+            "id": 2,
+            "name": "Clara Yasmim",
+            "email": "clara@gmail.com",
+            "status": "paid",
+            "value": 200,
+            "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E7"
+          },
+          {
+            "id": 3,
+            "name": "Arthur Cesar",
+            "email": "arthur@gmail.com",
+            "status": "paid",
+            "value": 200,
+            "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "internet",
+        "totalValue": 73,
+        "subTotal": 24.3,
+        "createdAt": "10/08/2020",
+        "dueDate": "",
+        "status": "late",
+        "own": "Harysson Soares",
+        "participants": [
+          {
+            "id": 1,
+            "name": "Harysson Soares",
+            "email": "haryssonsoares@gmail.com",
+            "status": "paid",
+            "value": 220,
+            "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
+          },
+          {
+            "id": 2,
+            "name": "Clara Yasmim",
+            "email": "clara@gmail.com",
+            "status": "paid",
+            "value": 200,
+            "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E7"
+          },
+          {
+            "id": 3,
+            "name": "Arthur Cesar",
+            "email": "arthur@gmail.com",
+            "status": "late",
+            "value": 200,
+            "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "supermarket",
+        "local": "ASSAI",
+        "totalValue": 73,
+        "subTotal": 24.3,
+        "createdAt": "10/08/2020",
+        "weekDay": "Saturday",
+        "time": "5:25:03",
+        "dueDate": "",
+        "itens": [
+          {
+            "id": 1,
+            "name": "tomate",
+            "price": 5.70,
+            "amount": 0.6
+          },
+          {
+            "id": 2,
+            "name": "azeite",
+            "price": 15.70,
+            "amount": 1
+          },
+          {
+            "id": 3,
+            "name": "arroz",
+            "price": 4.10,
+            "amount": 1
+          },
+          {
+            "id": 4,
+            "name": "Frango",
+            "price": 8.10,
+            "amount": 6.1
+          }
+        ],
+        "status": "late",
+        "own": "Clara Yasmim",
+        "participants": [
+          {
+            "id": 1,
+            "name": "Harysson Soares",
+            "email": "haryssonsoares@gmail.com",
+            "status": "paid",
+            "value": 220,
+            "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
+          },
+          {
+            "id": 2,
+            "name": "Clara Yasmim",
+            "email": "clara@gmail.com",
+            "status": "paid",
+            "value": 200,
+            "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E7"
+          },
+          {
+            "id": 3,
+            "name": "Arthur Cesar",
+            "email": "arthur@gmail.com",
+            "status": "late",
+            "value": 200,
+            "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "supermarket",
+        "local": "ASSAI",
+        "totalValue": 104,
+        "subTotal": 24.3,
+        "createdAt": "10/08/2020",
+        "weekDay": "Saturday",
+        "time": "5:25:03",
+        "dueDate": "",
+        "itens": [
+          {
+            "id": 1,
+            "name": "Energético",
+            "price": 5.99,
+            "amount": 1
+          },
+          {
+            "id": 2,
+            "name": "Leite",
+            "price": 15.70,
+            "amount": 1
+          },
+          {
+            "id": 3,
+            "name": "Suco",
+            "price": 1.10,
+            "amount": 1
+          },
+          {
+            "id": 4,
+            "name": "Danone",
+            "price": 2.10,
+            "amount": 2
+          }
+        ],
+        "status": "paid",
+        "own": "Harysson Soares",
+        "participants": [
+          {
+            "id": 1,
+            "name": "Harysson Soares",
+            "email": "haryssonsoares@gmail.com",
+            "status": "paid",
+            "value": 220,
+            "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
+          },
+          {
+            "id": 2,
+            "name": "Clara Yasmim",
+            "email": "clara@gmail.com",
+            "status": "paid",
+            "value": 200,
+            "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E7"
+          },
+          {
+            "id": 3,
+            "name": "Arthur Cesar",
+            "email": "arthur@gmail.com",
+            "status": "paid",
+            "value": 200,
+            "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "others",
+        "name": "Controles do portão",
+        "type": "default",
+        "totalValue": 104,
+        "subTotal": 24.3,
+        "createdAt": "10/08/2020",
+        "dueDate": "",
+        "status": "late",
+        "own": "Harysson Soares",
+        "participants": [
+          {
+            "id": 1,
+            "name": "Harysson Soares",
+            "email": "haryssonsoares@gmail.com",
+            "status": "paid",
+            "value": 220,
+            "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
+          },
+          {
+            "id": 2,
+            "name": "Clara Yasmim",
+            "email": "clara@gmail.com",
+            "status": "pending",
+            "value": 200,
+            "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/22228289_101615837263584_1141010751091235462_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=0Ui1q9tgk88AX9ZS71R&_nc_ht=scontent.fnat1-1.fna&oh=e25bb4d6664e9eb06970adc33f639fa8&oe=5F70C0E7"
+          },
+          {
+            "id": 3,
+            "name": "Arthur Cesar",
+            "email": "arthur@gmail.com",
+            "status": "late",
+            "value": 200,
+            "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "others",
+        "name": "NetFlix",
+        "type": "turn",
+        "totalValue": 45,
+        "createdAt": "10/08/2020",
+        "currentMonth": "September",
+        "dueDate": "",
+        "status": "activate",
+        "own": "Arthur Cesar",
+        "turn": "Harysson Soares",
+        "participants": [
+          {
+            "id": 1,
+            "name": "Harysson Soares",
+            "email": "haryssonsoares@gmail.com",
+            "status": "pending",
+            "payments": [],
+            "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
+          },
+          {
+            "id": 2,
+            "name": "Gabriel Dias",
+            "email": "gabrieldias@gmail.com",
+            "status": "paid",
+            "payments": [],
+            "photo": "https://tmssl.akamaized.net/images/portrait/originals/336474-1547633916.jpg"
+          },
+          {
+            "id": 3,
+            "name": "Arthur Cesar",
+            "email": "arthur@gmail.com",
+            "status": "paid",
+            "payments": [],
+            "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
+          }
+        ]
+      }
     }
   ]
 }

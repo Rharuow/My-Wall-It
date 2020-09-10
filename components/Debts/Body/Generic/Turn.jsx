@@ -13,7 +13,7 @@ const Turn = ({ totalValue, currentMonth, turn, own, createdAt, dueDate, status 
       <li className="list-group-item list-group-item-dark d-flex justify-content-between">Inicio: <strong className="text-center">{createdAt}</strong></li>
       <li className="list-group-item list-group-item-dark d-flex justify-content-between">Mês atual: <strong className="text-center">{currentMonth}</strong></li>
       <li className="list-group-item list-group-item-dark d-flex justify-content-between">Vencimento: <strong className="text-center">{dueDate === "" ? "--/--/--" : dueDate}</strong></li>
-      <li className="list-group-item list-group-item-dark d-flex justify-content-between">Status: <span className={`bge bge-${status}`}>{getStatus(status)}</span></li>
+      <li className="list-group-item list-group-item-dark d-flex justify-content-between">Status: <span className={`bge bge-${status == "activate" ? "paid" : "late"}`}>{getStatus(status)}</span></li>
     </ul>
   )
 }
