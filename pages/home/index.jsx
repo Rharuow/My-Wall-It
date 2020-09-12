@@ -27,7 +27,7 @@ const Home = () => {
         <h3 className="section-title">Despesas atuais</h3>
         <Slider {...settings}>
           {
-            Test["debt"].map(debt => (
+            Test["user"]["debt"].map(debt => (
               <Board key={debt} debt={debt} />
             ))
           }

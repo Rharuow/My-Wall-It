@@ -11,6 +11,7 @@
         "dueDate": "10/09/2020",
         "status": "pending",
         "own": "Arthur Cesar",
+        "isYour": true,
         "participants": [
           {
             "id": 1,
@@ -46,6 +47,7 @@
         "createdAt": "10/08/2020",
         "dueDate": "",
         "status": "paid",
+        "isYour": true,
         "own": "Arthur Cesar",
         "participants": [
           {
@@ -83,6 +85,7 @@
         "dueDate": "",
         "status": "late",
         "own": "Arthur Cesar",
+        "isYour": true,
         "participants": [
           {
             "id": 1,
@@ -119,6 +122,7 @@
         "dueDate": "10/09/2020",
         "status": "late",
         "own": "Arthur Cesar",
+        "isYour": true,
         "participants": [
           {
             "id": 1,
@@ -155,6 +159,7 @@
         "dueDate": "",
         "status": "late",
         "own": "Harysson Soares",
+        "isYour": true,
         "participants": [
           {
             "id": 1,
@@ -192,6 +197,9 @@
         "weekDay": "Saturday",
         "time": "5:25:03",
         "dueDate": "",
+        "status": "late",
+        "own": "Clara Yasmim",
+        "isYour": true,
         "itens": [
           {
             "id": 1,
@@ -218,8 +226,6 @@
             "amount": 6.1
           }
         ],
-        "status": "late",
-        "own": "Clara Yasmim",
         "participants": [
           {
             "id": 1,
@@ -257,6 +263,9 @@
         "weekDay": "Saturday",
         "time": "5:25:03",
         "dueDate": "",
+        "status": "paid",
+        "isYour": true,
+        "own": "Harysson Soares",
         "itens": [
           {
             "id": 1,
@@ -283,8 +292,6 @@
             "amount": 2
           }
         ],
-        "status": "paid",
-        "own": "Harysson Soares",
         "participants": [
           {
             "id": 1,
@@ -323,6 +330,7 @@
         "dueDate": "",
         "status": "late",
         "own": "Harysson Soares",
+        "isYour": true,
         "participants": [
           {
             "id": 1,
@@ -361,31 +369,44 @@
         "dueDate": "",
         "status": "activate",
         "own": "Arthur Cesar",
-        "turn": "Harysson Soares",
+        "isYour": false,
+        "turn": "Gabriel Dias",
         "participants": [
           {
             "id": 1,
             "name": "Harysson Soares",
             "email": "haryssonsoares@gmail.com",
-            "status": "pending",
+            "status": "paid",
+            "current": true,
             "payments": [],
-            "photo": "https://avatars1.githubusercontent.com/u/19626398?s=460&u=e75a23caa9898d68b6cf1de0bda0ea75eeabe53f&v=4"
+            "photo": "https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png"
           },
           {
             "id": 2,
             "name": "Gabriel Dias",
             "email": "gabrieldias@gmail.com",
-            "status": "paid",
+            "current": false,
+            "status": "pending",
             "payments": [],
-            "photo": "https://tmssl.akamaized.net/images/portrait/originals/336474-1547633916.jpg"
+            "photo": "https://www.iconfinder.com/data/icons/diversity-avatars-vol-2/64/black-man-bald-beard-512.png"
           },
           {
             "id": 3,
-            "name": "Arthur Cesar",
-            "email": "arthur@gmail.com",
+            "name": "Tayanne",
+            "email": "tayanne@gmail.com",
+            "current": false,
             "status": "paid",
             "payments": [],
-            "photo": "https://scontent.fnat1-1.fna.fbcdn.net/v/t1.0-9/115909641_2941271965983104_7264211982262482516_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=uMoe0WnDUc4AX9AcQUE&_nc_ht=scontent.fnat1-1.fna&oh=6f21aec89b6b2d7ea0d76e65335bdebe&oe=5F702BC2"
+            "photo": "https://www.iconfinder.com/data/icons/sexy-portrait-girl-avatar-cute-beautiful-young-gir/283/female-138-512.png"
+          },
+          {
+            "id": 4,
+            "name": "Mariangela",
+            "email": "mariangela@gmail.com",
+            "current": true,
+            "status": "paid",
+            "payments": [],
+            "photo": "https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png"
           }
         ]
       }

@@ -7,19 +7,6 @@ import Default from './Default'
 import Turn from './Turn'
 
 const Generic = ({ info }) => {
-<<<<<<< HEAD
-=======
-
-  const settings = {
-    className: "center",
-    centerMode: true,
-    infinite: true,
-    centerPadding: "60px",
-    slidesToShow: info.participants.length - 1,
-    speed: 500
-  };
-
->>>>>>> 53605312dc1743009344db600a95b7050f011cc4
   return (
     <>
       <Header title={info.title} name={info.name} />
@@ -48,7 +35,7 @@ const Generic = ({ info }) => {
           />
         }
       </div>
-      <Footer participants={info.participants} turn={info.turn} own={info.own} />
+      <Footer participants={info.participants} isYour={info.isYour} turn={info.turn} own={info.own} />
     </>
   )
 }
