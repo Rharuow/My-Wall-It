@@ -1,0 +1,112 @@
+[
+  {
+    "title": "rent",
+    "fields": {
+      "name": "require",
+      "totalValue": "require",
+      "dueDate": "require",
+      "status": "pending",
+      "isGroup": false,
+      "subTotal": "",
+      "isEquitable": false,
+      "participant": {
+        "name": "require",
+        "status": "pending",
+        "value": "require"
+      }
+    }
+  },
+  {
+    "title": "water",
+    "fields": {
+      "totalValue": "require",
+      "payDay": "require",
+      "dueDate": "",
+      "status": "pending",
+      "isGroup": false,
+      "subTotal": "",
+      "isEquitable": false,
+      "participant": {
+        "name": "require",
+        "status": "pending",
+        "value": "require"
+      }
+    }
+  },
+  {
+    "title": "energy",
+    "fields": {
+      "totalValue": "require",
+      "payDay": "require",
+      "dueDate": "",
+      "status": "pending",
+      "isGroup": false,
+      "subTotal": "",
+      "isEquitable": false,
+      "participant": {
+        "name": "require",
+        "status": "pending",
+        "value": "require"
+      }
+    }
+  },
+  {
+    "title": "gas",
+    "fields": {
+      "totalValue": "require",
+      "payDay": "require",
+      "dueDate": "",
+      "status": "pending",
+      "isGroup": false,
+      "subTotal": "",
+      "isEquitable": false,
+      "participant": {
+        "name": "require",
+        "status": "pending",
+        "value": "require"
+      }
+    }
+  },
+  {
+    "title": "internet",
+    "fields": {
+      "totalValue": "require",
+      "payDay": "require",
+      "dueDate": "",
+      "status": "pending",
+      "isGroup": false,
+      "subTotal": "",
+      "isEquitable": false,
+      "participant": {
+        "name": "require",
+        "status": "pending",
+        "value": "require"
+      }
+    }
+  },
+  {
+    "title": "supermarket",
+    "fields": {
+      "local": "require",
+      "totalValue": "require",
+      "payDay": "require",
+      "weekDay": "require",
+      "time": "require",
+      "dueDate": "",
+      "status": "pending",
+      "isGroup": false,
+      "subTotal": "",
+      "isEquitable": false,
+      "item": {
+        "name": "require",
+        "price": "require",
+        "amount": "require"
+      },
+      "participant": {
+        "name": "require",
+        "status": "pending",
+        "value": "require"
+      }
+    }
+  }
+]

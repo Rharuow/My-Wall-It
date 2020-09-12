@@ -6,7 +6,8 @@ import Slider from "react-slick";
 import Header from '../../components/common/Header'
 import Board from '../../components/Board'
 
-import Test from '../../data/test.json'
+import test from '../../data/test.json'
+import parametersToCreateDebts from '../../data/parametersToCreateDebtss.json'
 
 const Home = () => {
   const [session, loading] = useSession()
@@ -27,17 +28,15 @@ const Home = () => {
         <h3 className="section-title">Despesas atuais</h3>
         <Slider {...settings}>
           {
-            Test["user"]["debt"].map(debt => (
+            test["user"]["debt"].map(debt => (
               <Board key={debt} debt={debt} />
             ))
           }
         </Slider>
       </div>
       <div className="section mt-2">
-        <h3 className="section-title">Cadastrar Novas Despesas</h3>
-        <Slider {...settings}>
-
-        </Slider>
+        <h3 className="section-title">Novas Despesas</h3>
+        <Board createDebt={parametersToCreateDebts} />
       </div>
     </div>
   )
