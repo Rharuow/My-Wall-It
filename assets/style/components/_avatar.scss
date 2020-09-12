@@ -4,6 +4,10 @@
   overflow: hidden;
   border-radius: 3.4375rem;
 
+  img {
+    width: 100%;
+  }
+
   &.border-paid {
     border: 5px solid $success;
   }
@@ -20,7 +24,8 @@
     border: 3px solid $black;
   }
 
-  img {
-    width: 100%;
+  &.highlight {
+    max-width: 4rem;
+    height: 4rem;
   }
 }

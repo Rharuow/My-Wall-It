@@ -6,6 +6,10 @@ export const getStatus = state => {
       return "Pendente"
     case "late":
       return "Atrasado"
+    case "activate":
+      return "Ativo"
+    case "deactivated":
+      return "Desativado"
   }
 }
 
