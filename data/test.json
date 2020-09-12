@@ -377,7 +377,7 @@
             "name": "Harysson Soares",
             "email": "haryssonsoares@gmail.com",
             "status": "paid",
-            "current": true,
+            "current": false,
             "payments": [],
             "photo": "https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png"
           },
@@ -385,7 +385,7 @@
             "id": 2,
             "name": "Gabriel Dias",
             "email": "gabrieldias@gmail.com",
-            "current": false,
+            "current": true,
             "status": "pending",
             "payments": [],
             "photo": "https://www.iconfinder.com/data/icons/diversity-avatars-vol-2/64/black-man-bald-beard-512.png"
@@ -407,6 +407,49 @@
             "status": "paid",
             "payments": [],
             "photo": "https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "others",
+        "name": "Água Mineral",
+        "type": "turn",
+        "totalValue": 12,
+        "createdAt": "10/08/2020",
+        "currentMonth": "September",
+        "dueDate": "",
+        "status": "activate",
+        "own": "Harysson Soares",
+        "isYour": true,
+        "turn": "Arthur Cesar",
+        "participants": [
+          {
+            "id": 1,
+            "name": "Harysson Soares",
+            "email": "haryssonsoares@gmail.com",
+            "status": "paid",
+            "current": false,
+            "payments": [],
+            "photo": "https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png"
+          },
+          {
+            "id": 2,
+            "name": "Arthur Cesar",
+            "email": "arthurcesar@gmail.com",
+            "current": true,
+            "status": "pending",
+            "payments": [],
+            "photo": "https://i.pinimg.com/originals/d1/1a/45/d11a452f5ce6ab534e083cdc11e8035e.png"
+          },
+          {
+            "id": 3,
+            "name": "Clara Yasmin",
+            "email": "clarayasmin@gmail.com",
+            "current": false,
+            "status": "paid",
+            "payments": [],
+            "photo": "https://www.iconfinder.com/data/icons/sexy-portrait-girl-avatar-cute-beautiful-young-gir/283/female-138-512.png"
           }
         ]
       }

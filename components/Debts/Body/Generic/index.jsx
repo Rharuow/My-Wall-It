@@ -32,6 +32,7 @@ const Generic = ({ info }) => {
             createdAt={info.createdAt}
             dueDate={info.dueDate}
             status={info.status}
+            isYour={info.isYour}
           />
         }
       </div>
