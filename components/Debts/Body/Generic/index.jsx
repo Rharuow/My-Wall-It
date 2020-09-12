@@ -6,7 +6,6 @@ import Footer from '../../Footer'
 import Default from './Default'
 
 const Generic = ({ info }) => {
-  console.log(info)
   return (
     <>
       <Header title={info.title} name={info.name} />
