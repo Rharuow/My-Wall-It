@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { debtName } from '../../../../assets/scripts/utils/translate'
-
 const Select = ({ className, classNameOptions, onChange, id, labelText, options, selected }) => {
   return (
     <>
