@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Form from '../Form'
 import Rent from '../Debts/Body/Rent'
 import Water from '../Debts/Body/Water'
 import Energy from '../Debts/Body/Energy'
@@ -9,8 +8,9 @@ import Gas from '../Debts/Body/Gas'
 import Internet from '../Debts/Body/Internet'
 import Supermarket from '../Debts/Body/Supermarket'
 import Generic from '../Debts/Body/Generic/'
+import Forms from '../Forms'
 
-const Index = ({ debt, createDebt }) => {
+const Board = ({ debt, createDebt }) => {
   return (
     <>
       <div className="board shadow d-flex flex-column justify-content-center align-item-center">
@@ -44,16 +44,16 @@ const Index = ({ debt, createDebt }) => {
         }
         {
           createDebt &&
-          <Form params={createDebt} />
+          <Forms params={createDebt} />
         }
       </div>
     </>
   )
 }
 
-Index.propTypes = {
+Board.propTypes = {
   debt: PropTypes.object,
   createDebt: PropTypes.array
 }
 
-export default Index
+export default Board

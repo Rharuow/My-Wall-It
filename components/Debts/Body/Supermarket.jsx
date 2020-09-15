@@ -5,8 +5,8 @@ import FadeIn from 'react-fade-in';
 
 import formatMoney from '../../../assets/scripts/utils/formatMoney'
 
-import Header from '../Header'
-import Footer from '../Footer'
+import Header from '../../Board/Header'
+import Footer from '../../Board/Footer'
 
 import { getStatus } from '../../../assets/scripts/utils/translate'
 

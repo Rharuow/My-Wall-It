@@ -56,6 +56,11 @@ h6 {
   margin-bottom: 3rem;
 }
 
+label {
+  color: $white !important;
+  font-size: 0.9rem !important;
+}
+
 @include media-breakpoint-up(md) {
   h1,
   h2,

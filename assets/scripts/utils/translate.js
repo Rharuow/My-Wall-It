@@ -46,6 +46,8 @@ export const icon = title => {
       return "fas fa-burn"
     case "supermarket":
       return "fas fa-shopping-cart"
+    case "new debt":
+      return "fas fa-receipt"
     default:
       return "fas fa-hand-holding-usd"
   }

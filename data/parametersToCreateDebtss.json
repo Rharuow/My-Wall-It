@@ -2,110 +2,110 @@
   {
     "title": "rent",
     "fields": {
-      "name": "require",
-      "totalValue": "require",
-      "dueDate": "require",
+      "name": "required",
+      "totalValue": "required",
+      "dueDate": "required",
       "status": "pending",
       "isGroup": false,
       "subTotal": "",
       "isEquitable": false,
       "participant": {
-        "name": "require",
+        "name": "required",
         "status": "pending",
-        "value": "require"
+        "value": "required"
       }
     }
   },
   {
     "title": "water",
     "fields": {
-      "totalValue": "require",
-      "payDay": "require",
+      "totalValue": "required",
+      "payDay": "required",
       "dueDate": "",
       "status": "pending",
       "isGroup": false,
       "subTotal": "",
       "isEquitable": false,
       "participant": {
-        "name": "require",
+        "name": "required",
         "status": "pending",
-        "value": "require"
+        "value": "required"
       }
     }
   },
   {
     "title": "energy",
     "fields": {
-      "totalValue": "require",
-      "payDay": "require",
+      "totalValue": "required",
+      "payDay": "required",
       "dueDate": "",
       "status": "pending",
       "isGroup": false,
       "subTotal": "",
       "isEquitable": false,
       "participant": {
-        "name": "require",
+        "name": "required",
         "status": "pending",
-        "value": "require"
+        "value": "required"
       }
     }
   },
   {
     "title": "gas",
     "fields": {
-      "totalValue": "require",
-      "payDay": "require",
+      "totalValue": "required",
+      "payDay": "required",
       "dueDate": "",
       "status": "pending",
       "isGroup": false,
       "subTotal": "",
       "isEquitable": false,
       "participant": {
-        "name": "require",
+        "name": "required",
         "status": "pending",
-        "value": "require"
+        "value": "required"
       }
     }
   },
   {
     "title": "internet",
     "fields": {
-      "totalValue": "require",
-      "payDay": "require",
+      "totalValue": "required",
+      "payDay": "required",
       "dueDate": "",
       "status": "pending",
       "isGroup": false,
       "subTotal": "",
       "isEquitable": false,
       "participant": {
-        "name": "require",
+        "name": "required",
         "status": "pending",
-        "value": "require"
+        "value": "required"
       }
     }
   },
   {
     "title": "supermarket",
     "fields": {
-      "local": "require",
-      "totalValue": "require",
-      "payDay": "require",
-      "weekDay": "require",
-      "time": "require",
+      "local": "required",
+      "totalValue": "required",
+      "payDay": "required",
+      "weekDay": "required",
+      "time": "required",
       "dueDate": "",
       "status": "pending",
       "isGroup": false,
       "subTotal": "",
       "isEquitable": false,
       "item": {
-        "name": "require",
-        "price": "require",
-        "amount": "require"
+        "name": "required",
+        "price": "required",
+        "amount": "required"
       },
       "participant": {
-        "name": "require",
+        "name": "required",
         "status": "pending",
-        "value": "require"
+        "value": "required"
       }
     }
   }
