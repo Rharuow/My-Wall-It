@@ -19,7 +19,7 @@ const Forms = ({ params }) => {
     name: debtName(debt.title)
   }))
 
-  console.log(debts)
+  console.log(debtType)
 
   return (
     <>
