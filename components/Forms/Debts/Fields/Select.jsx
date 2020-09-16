@@ -8,9 +8,9 @@ const Select = ({ className, classNameOptions, onChange, id, labelText, options,
         labelText &&
         <label htmlFor={id}>{labelText}</label>
       }
-      <select className={`form-control ${className}`} onChange={(e) => onChange(e)} id={id}>
+      <select className={`form-control ${className}`} onChange={onChange} id={id}>
         {
-          options.map(opt => <option className={classNameOptions} key={opt.value}>{opt.name}</option>)
+          options.map(opt => <option className={classNameOptions} value={opt.value} key={opt.value}>{opt.name}</option>)
         }
       </select>
     </>
