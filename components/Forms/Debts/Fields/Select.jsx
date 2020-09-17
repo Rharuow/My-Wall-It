@@ -1,14 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Select = ({ className, classNameOptions, onChange, id, labelText, options, selected }) => {
+const Select = ({ className, classNameOptions, onChange, refInput, labelText, options }) => {
   return (
     <>
       {
         labelText &&
-        <label htmlFor={id}>{labelText}</label>
+        <label htmlFor={refInput}>{labelText}</label>
       }
-      <select className={`form-control ${className}`} onChange={onChange} id={id}>
+      <select className={`form-control ${className}`} defaultValue="disabled" onChange={onChange} ref={refInput}>
+        <option value="disabled" disabled>Escolha o tipo de dívida</option>
         {
           options.map(opt => <option className={classNameOptions} value={opt.value} key={opt.value}>{opt.name}</option>)
         }
@@ -24,7 +25,6 @@ Select.propTypes = {
   id: PropTypes.string,
   labelText: PropTypes.string,
   options: PropTypes.array,
-  selected: PropTypes.bool,
 }
 
 export default Select
