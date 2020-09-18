@@ -13,16 +13,25 @@ const Rent = ({ users }) => {
   const [totalValue, setTotalValue] = useState("0,00")
   const [splitDebt, setSplitDebt] = useState(false)
   const [equitable, setEquitable] = useState(false)
+  const [partcipants, setParticipants] = useState([])
+
+  const options = users.map((user) => ({ value: user.email, label: user.name, photo: user.photo }))
 
   const houseNameInput = useRef("houseNameInput")
   const totalValueInput = useRef("totalValueInput")
+
+  useEffect(() => {
+
+  }, [partcipants])
 
   useEffect(() => {
     if (name === "") return setShowMoneyField(false)
     return setShowMoneyField(true)
   }, [name, showMoneyField])
 
-  const options = users.map((user) => ({ value: user.email, label: user.name }))
+  const handlerParticipants = participants => {
+    console.log(participants)
+  }
 
   return (
     <div className="form-group ">
@@ -43,30 +52,40 @@ const Rent = ({ users }) => {
                   }} />
               </div>
               {
-                splitDebt && (
-                  <>
-                    <div className="col-6">
-                      <label>Divisão por igual?</label>
-                      <ToggleButton
-                        inactiveLabel="Não"
-                        activeLabel="Sim"
-                        value={equitable}
-                        onToggle={(value) => {
-                          setEquitable(!value)
-                        }} />
-                    </div>
-                    <div className="col-12">
-                      <Select
-                        closeMenuOnSelect={false}
-                        components={makeAnimated()}
-                        isMulti
-                        options={options}
-                        placeholder="Selecione os participantes"
-                        className="mt-3"
-                      />
-                    </div>
-                  </>
-                )
+                splitDebt &&
+                <>
+                  <div className="col-6">
+                    <label>Divisão por igual?</label>
+                    <ToggleButton
+                      inactiveLabel="Não"
+                      activeLabel="Sim"
+                      value={equitable}
+                      onToggle={(value) => {
+                        setEquitable(!value)
+                      }} />
+                  </div>
+                  <div className="col-12">
+                    <Select
+                      closeMenuOnSelect={false}
+                      components={makeAnimated()}
+                      isMulti
+                      options={options}
+                      onChange={e => handlerParticipants(e)}
+                      placeholder="Selecione os participantes"
+                      className="mt-3"
+                    />
+                  </div>
+                  {
+                    equitable ?
+                      <div className="col-12">
+
+                      </div>
+                      :
+                      <div className="col-12">
+
+                      </div>
+                  }
+                </>
               }
             </div>
           </>
