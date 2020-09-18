@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import Select from 'react-select'
 import makeAnimated from 'react-select/animated'
+import { useSession } from 'next-auth/client'
 
 import ToggleButton from 'react-toggle-button'
 import Input from '../Fields/Input'
@@ -9,15 +10,18 @@ import Money from '../Fields/Money'
 import { getMoneyValue } from '../../../../assets/scripts/utils/translate'
 
 const Rent = ({ users }) => {
+  const [session, loading] = useSession()
+
   const [name, setName] = useState("")
   const [showMoneyField, setShowMoneyField] = useState(false)
   const [showParticipantsValues, setShowParticipantsValues] = useState(false)
   const [totalValue, setTotalValue] = useState("0,00")
   const [splitDebt, setSplitDebt] = useState(false)
   const [equitable, setEquitable] = useState(false)
-  const [participants, setParticipants] = useState([])
+  const [participants, setParticipants] = useState([{ value: session.user.email, label: session.user.name, photo: session.user.image }])
 
-  const options = users.map((user) => ({ value: user.email, label: user.name, photo: user.photo }))
+  const allUser = users.map(user => ({ value: user.email, label: user.name, photo: user.photo }))
+  const options = allUser.filter(user => user.value !== session.user.email)
 
   const houseNameInput = useRef("houseNameInput")
   const totalValueInput = useRef("totalValueInput")
@@ -32,7 +36,15 @@ const Rent = ({ users }) => {
     return setShowParticipantsValues(false)
   }, [participants, showParticipantsValues])
 
-  const handlerParticipants = participants => setParticipants(participants)
+  const handlerParticipants = parts => {
+    if (parts !== null) {
+      console.log("BEFORE = ", tempParticipants)
+      const tempParticipants = participants
+      parts.forEach(part => tempParticipants.push(part))
+      console.log("AFTER = ", tempParticipants)
+      setParticipants(tempParticipants)
+    }
+  }
 
   return (
     <div className="form-group ">
@@ -80,7 +92,7 @@ const Rent = ({ users }) => {
                     {
                       showParticipantsValues &&
                       participants.map((participant, index) => {
-                        console.log(getMoneyValue(totalValue))
+                        // console.log(getMoneyValue(totalValue))
                         const participantValue = parseFloat(totalValue) / (participants.length + 1)
                         return <Money value={participantValue} key={index} onChange={e => setTotalValue(e.target.value)} labelText={`Parte de ${participant.label.split(" ")[0]}`} />
                       }

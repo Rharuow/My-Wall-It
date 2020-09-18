@@ -7,7 +7,6 @@ import { debtName } from '../../assets/scripts/utils/translate'
 import Header from '../Board/Header'
 import Rent from './Debts/Rent'
 
-
 const Forms = ({ params }) => {
 
   const [debtType, setDebtType] = useState("")
