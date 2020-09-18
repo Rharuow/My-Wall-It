@@ -6,14 +6,16 @@ import makeAnimated from 'react-select/animated'
 import ToggleButton from 'react-toggle-button'
 import Input from '../Fields/Input'
 import Money from '../Fields/Money'
+import { getMoneyValue } from '../../../../assets/scripts/utils/translate'
 
 const Rent = ({ users }) => {
   const [name, setName] = useState("")
   const [showMoneyField, setShowMoneyField] = useState(false)
+  const [showParticipantsValues, setShowParticipantsValues] = useState(false)
   const [totalValue, setTotalValue] = useState("0,00")
   const [splitDebt, setSplitDebt] = useState(false)
   const [equitable, setEquitable] = useState(false)
-  const [partcipants, setParticipants] = useState([])
+  const [participants, setParticipants] = useState([])
 
   const options = users.map((user) => ({ value: user.email, label: user.name, photo: user.photo }))
 
@@ -21,17 +23,16 @@ const Rent = ({ users }) => {
   const totalValueInput = useRef("totalValueInput")
 
   useEffect(() => {
-
-  }, [partcipants])
-
-  useEffect(() => {
     if (name === "") return setShowMoneyField(false)
     return setShowMoneyField(true)
   }, [name, showMoneyField])
 
-  const handlerParticipants = participants => {
-    console.log(participants)
-  }
+  useEffect(() => {
+    if (participants.length > 0) return setShowParticipantsValues(true)
+    return setShowParticipantsValues(false)
+  }, [participants, showParticipantsValues])
+
+  const handlerParticipants = participants => setParticipants(participants)
 
   return (
     <div className="form-group ">
@@ -75,16 +76,17 @@ const Rent = ({ users }) => {
                       className="mt-3"
                     />
                   </div>
-                  {
-                    equitable ?
-                      <div className="col-12">
-
-                      </div>
-                      :
-                      <div className="col-12">
-
-                      </div>
-                  }
+                  <div className="col-12">
+                    {
+                      showParticipantsValues &&
+                      participants.map((participant, index) => {
+                        console.log(getMoneyValue(totalValue))
+                        const participantValue = parseFloat(totalValue) / (participants.length + 1)
+                        return <Money value={participantValue} key={index} onChange={e => setTotalValue(e.target.value)} labelText={`Parte de ${participant.label.split(" ")[0]}`} />
+                      }
+                      )
+                    }
+                  </div>
                 </>
               }
             </div>
