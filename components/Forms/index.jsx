@@ -1,11 +1,11 @@
 import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
+import Select from 'react-select';
 
 import { debtName } from '../../assets/scripts/utils/translate'
 
 import Header from '../Board/Header'
 import Rent from './Debts/Rent'
-import Select from './Debts/Fields/Select'
 
 
 const Forms = ({ params }) => {
@@ -16,7 +16,7 @@ const Forms = ({ params }) => {
 
   const debts = params.map(debt => ({
     value: debt.title,
-    name: debtName(debt.title)
+    label: debtName(debt.title)
   }))
 
   const debtTypeInput = useRef("debtTypeInput")
@@ -27,17 +27,45 @@ const Forms = ({ params }) => {
       <form>
         <div className="form-group">
           <Select
-            refInput={debtTypeInput}
-            onChange={(e) => handlerSelect(e.target.value)}
-            id="type-debt"
-            labelText="Qual tipo da dívida?"
+            onChange={e => handlerSelect(e.value)}
             options={debts}
-            classNameOptions="debt-name"
+            placeholder="Selecione um tipo de dívida"
           />
           {
             debtType === "rent" &&
             <Rent
-              fields={params[0].fields}
+              users={[
+                {
+                  "name": "Harysson Soares",
+                  "email": "haryssonsoares@gmail.com",
+                  "photo": "https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png"
+                },
+                {
+                  "name": "Clara Yasmim",
+                  "email": "clara@gmail.com",
+                  "photo": "https://www.iconfinder.com/data/icons/sexy-portrait-girl-avatar-cute-beautiful-young-gir/283/female-138-512.png"
+                },
+                {
+                  "name": "Arthur Cesar",
+                  "email": "arthur@gmail.com",
+                  "photo": "https://i.pinimg.com/originals/d1/1a/45/d11a452f5ce6ab534e083cdc11e8035e.png"
+                },
+                {
+                  "name": "Gabriel Dias",
+                  "email": "gabrieldias@gmail.com",
+                  "photo": "https://www.iconfinder.com/data/icons/diversity-avatars-vol-2/64/black-man-bald-beard-512.png"
+                },
+                {
+                  "name": "Tayanne",
+                  "email": "tayanne@gmail.com",
+                  "photo": "https://www.iconfinder.com/data/icons/sexy-portrait-girl-avatar-cute-beautiful-young-gir/283/female-138-512.png"
+                },
+                {
+                  "name": "Mariangela",
+                  "email": "mariangela@gmail.com",
+                  "photo": "https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png"
+                }
+              ]}
             />
           }
         </div>
