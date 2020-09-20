@@ -41,9 +41,8 @@ const Rent = ({ users }) => {
     if (parts !== null) {
       const excludeParticipants = parts.filter(part => !participants.includes(part))
       const tempParticipants = participants.concat(excludeParticipants)
+      console.log(tempParticipants)
       setParticipants(tempParticipants)
-    } else {
-      console.log(parts)
     }
   }
 
