@@ -11,6 +11,12 @@ import { getMoneyValue } from '../../../../assets/scripts/utils/translate'
 
 const Rent = ({ users }) => {
   const [session, loading] = useSession()
+  const allUser = users.map(user => ({ value: user.email, label: user.name, photo: user.photo }))
+  const options = allUser.filter(user => user.value !== session.user.email)
+  const initialParticipantsState = [{ value: session.user.email, label: session.user.name, photo: session.user.image }]
+
+  const houseNameInput = useRef("houseNameInput")
+  const totalValueInput = useRef("totalValueInput")
 
   const [name, setName] = useState("")
   const [showMoneyField, setShowMoneyField] = useState(false)
@@ -18,13 +24,8 @@ const Rent = ({ users }) => {
   const [totalValue, setTotalValue] = useState("0,00")
   const [splitDebt, setSplitDebt] = useState(false)
   const [equitable, setEquitable] = useState(false)
-  const [participants, setParticipants] = useState([{ value: session.user.email, label: session.user.name, photo: session.user.image }])
+  const [participants, setParticipants] = useState(initialParticipantsState)
 
-  const allUser = users.map(user => ({ value: user.email, label: user.name, photo: user.photo }))
-  const options = allUser.filter(user => user.value !== session.user.email)
-
-  const houseNameInput = useRef("houseNameInput")
-  const totalValueInput = useRef("totalValueInput")
 
   useEffect(() => {
     if (name === "") return setShowMoneyField(false)
@@ -39,10 +40,11 @@ const Rent = ({ users }) => {
 
   const handlerParticipants = parts => {
     if (parts !== null) {
-      const excludeParticipants = parts.filter(part => !participants.includes(part))
-      const tempParticipants = participants.concat(excludeParticipants)
-      console.log(tempParticipants)
+      const tempParticipants = parts.map(part => part)
+      tempParticipants.push({ value: session.user.email, label: session.user.name, photo: session.user.image })
       setParticipants(tempParticipants)
+    } else {
+      setParticipants(initialParticipantsState)
     }
   }
 
@@ -92,7 +94,6 @@ const Rent = ({ users }) => {
                     {
                       showParticipantsValues &&
                       participants.map((participant, index) => {
-                        // console.log(participant)
                         const participantValue = parseFloat(totalValue) / (participants.length + 1)
                         return <Money value={participantValue} key={index} onChange={e => setTotalValue(e.target.value)} labelText={`Parte de ${participant.label.split(" ")[0]}`} />
                       }
