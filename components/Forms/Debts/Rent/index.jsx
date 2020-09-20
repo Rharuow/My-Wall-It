@@ -32,17 +32,18 @@ const Rent = ({ users }) => {
   }, [name, showMoneyField])
 
   useEffect(() => {
+    // console.log("participants", participants)
     if (participants.length > 0) return setShowParticipantsValues(true)
     return setShowParticipantsValues(false)
   }, [participants, showParticipantsValues])
 
   const handlerParticipants = parts => {
     if (parts !== null) {
-      console.log("BEFORE = ", tempParticipants)
-      const tempParticipants = participants
-      parts.forEach(part => tempParticipants.push(part))
-      console.log("AFTER = ", tempParticipants)
+      const excludeParticipants = parts.filter(part => !participants.includes(part))
+      const tempParticipants = participants.concat(excludeParticipants)
       setParticipants(tempParticipants)
+    } else {
+      console.log(parts)
     }
   }
 
@@ -92,7 +93,7 @@ const Rent = ({ users }) => {
                     {
                       showParticipantsValues &&
                       participants.map((participant, index) => {
-                        // console.log(getMoneyValue(totalValue))
+                        // console.log(participant)
                         const participantValue = parseFloat(totalValue) / (participants.length + 1)
                         return <Money value={participantValue} key={index} onChange={e => setTotalValue(e.target.value)} labelText={`Parte de ${participant.label.split(" ")[0]}`} />
                       }

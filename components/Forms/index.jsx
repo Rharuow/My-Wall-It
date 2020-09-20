@@ -58,11 +58,6 @@ const Forms = ({ params }) => {
                   "name": "Tayanne",
                   "email": "tayanne@gmail.com",
                   "photo": "https://www.iconfinder.com/data/icons/sexy-portrait-girl-avatar-cute-beautiful-young-gir/283/female-138-512.png"
-                },
-                {
-                  "name": "Mariangela",
-                  "email": "mariangela@gmail.com",
-                  "photo": "https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png"
                 }
               ]}
             />
