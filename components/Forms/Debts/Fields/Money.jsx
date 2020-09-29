@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import CurrencyInput from 'react-currency-input';
 
-const Money = ({ value, onChange, className, divClassName, labelClassName, inputRef, labelText }) => {
+const Money = ({ value, onChange, disabled = false, className, divClassName, labelClassName, labelText }) => {
   return (
     <div className={`${divClassName}`}>
       {
         labelText &&
-        <label htmlFor={inputRef} className={labelClassName}>{labelText}</label>
+        <label className={labelClassName}>{labelText}</label>
       }
-      <div className="input-group">
-        <CurrencyInput value={value ? value : "0,00"} prefix="R$ " ref={inputRef} className={`form-control ${className}`} decimalSeparator="," thousandSeparator="." onChangeEvent={onChange} />
-      </div>
+      {
+        <div className="input-group">
+          <CurrencyInput value={value} prefix="R$ " disabled={disabled} className={`form-control ${className}`} decimalSeparator="," thousandSeparator="." onChangeEvent={onChange} />
+        </div>
+      }
     </div>
   )
 }
@@ -23,7 +25,8 @@ Money.propTypes = {
   divClassName: PropTypes.string,
   labelClassName: PropTypes.string,
   name: PropTypes.string,
-  labelText: PropTypes.string
+  labelText: PropTypes.string,
+  disabled: PropTypes.bool,
 }
 
 export default Money
