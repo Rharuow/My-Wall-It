@@ -21,22 +21,13 @@ const Rent = ({ users }) => {
   const [name, setName] = useState("")
   const [showMoneyField, setShowMoneyField] = useState(false)
   const [showParticipantsValues, setShowParticipantsValues] = useState(false)
-  const [totalValue, setTotalValue] = useState("0,00")
+  const [totalValue, setTotalValue] = useState(0)
+  const [subTotal, setSubTotal] = useState(0)
   const [splitDebt, setSplitDebt] = useState(false)
   const [equitable, setEquitable] = useState(false)
   const [participants, setParticipants] = useState(initialParticipantsState)
 
-
-  useEffect(() => {
-    if (name === "") return setShowMoneyField(false)
-    return setShowMoneyField(true)
-  }, [name, showMoneyField])
-
-  useEffect(() => {
-    // console.log("participants", participants)
-    if (participants.length > 0) return setShowParticipantsValues(true)
-    return setShowParticipantsValues(false)
-  }, [participants, showParticipantsValues])
+  const handlerTotalValue = value => setTotalValue(value.split(" ")[1])
 
   const handlerParticipants = parts => {
     if (parts !== null) {
@@ -48,13 +39,39 @@ const Rent = ({ users }) => {
     }
   }
 
+  const propsToValueMoneyEachParticipant = disabled => {
+    let onChange, value
+    if (disabled) {
+      value = getMoneyValue(totalValue) / participants.length
+      onChange = (() => setSubTotal(value))
+    } else {
+      onChange = (e => setSubTotal(getMoneyValue(totalValue) - getMoneyValue(e.target.value)))
+    }
+    const props = { onChange, disabled, value }
+    return props
+  }
+
+  useEffect(() => {
+    if (name === "") return setShowMoneyField(false)
+    return setShowMoneyField(true)
+  }, [name, showMoneyField])
+
+  useEffect(() => {
+    if (participants.length > 0) return setShowParticipantsValues(true)
+    return setShowParticipantsValues(false)
+  }, [participants, showParticipantsValues])
+
+  useEffect(() => {
+    console.log(subTotal)
+  }, [subTotal])
+
   return (
     <div className="form-group ">
       <Input type="text" inputRef={houseNameInput} onChange={e => setName(e.target.value)} labelText="Qual o nome da casa?" placeholder="Nome da casa" value={name ? name : ""} />
       {
         showMoneyField && (
           <>
-            <Money value={totalValue} onChange={e => setTotalValue(e.target.value)} inputRef={totalValueInput} labelText="Qual valor do aluguel?" />
+            <Money value={totalValue} onChange={e => handlerTotalValue(e.target.value)} inputRef={totalValueInput} labelText="Qual valor do aluguel?" />
             <div className="form-row">
               <div className="col-6">
                 <label>Vai dividir a conta?</label>
@@ -93,11 +110,7 @@ const Rent = ({ users }) => {
                   <div className="col-12">
                     {
                       showParticipantsValues &&
-                      participants.map((participant, index) => {
-                        const participantValue = parseFloat(totalValue) / (participants.length + 1)
-                        return <Money value={participantValue} key={index} onChange={e => setTotalValue(e.target.value)} labelText={`Parte de ${participant.label.split(" ")[0]}`} />
-                      }
-                      )
+                      participants.map((participant, index) => <Money key={index} labelText={`Parte de ${participant.label.split(" ")[0]}`} {...propsToValueMoneyEachParticipant(equitable)} />)
                     }
                   </div>
                 </>
@@ -110,8 +123,5 @@ const Rent = ({ users }) => {
   )
 }
 
-Rent.propTypes = {
-  users: PropTypes.array
-}
 
 export default Rent
