@@ -13,7 +13,7 @@ const Input = ({
   value,
 }) => {
   return (
-    <div className={`${divClassName}`}>
+    <div className={`form-group ${divClassName ? divClassName : ""}`}>
       {
         labelText &&
         <label htmlFor={inputRef} className={labelClassName}>{labelText}</label>

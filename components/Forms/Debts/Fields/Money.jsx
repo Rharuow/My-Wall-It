@@ -2,16 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import CurrencyInput from 'react-currency-input';
 
-const Money = ({ value, onChange, disabled = false, className, divClassName, labelClassName, labelText }) => {
+const Money = ({ value, onChange, disabled = false, className, divClassName, labelClassName, labelText, inputRef }) => {
+  console.log(inputRef)
   return (
-    <div className={`${divClassName}`}>
+    <div className={`form-group ${divClassName ? divClassName : ""}`}>
       {
         labelText &&
-        <label className={labelClassName}>{labelText}</label>
+        <label htmlFor={inputRef} className={labelClassName}>{labelText}</label>
       }
       {
         <div className="input-group">
-          <CurrencyInput value={value} prefix="R$ " disabled={disabled} className={`form-control ${className}`} decimalSeparator="," thousandSeparator="." onChangeEvent={onChange} />
+          <CurrencyInput value={value} prefix="R$ " ref={inputRef} disabled={disabled} className={`form-control ${className}`} decimalSeparator="," thousandSeparator="." onChangeEvent={onChange} />
         </div>
       }
     </div>

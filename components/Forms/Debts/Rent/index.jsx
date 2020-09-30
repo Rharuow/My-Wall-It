@@ -21,8 +21,8 @@ const Rent = ({ users }) => {
   const [name, setName] = useState("")
   const [showMoneyField, setShowMoneyField] = useState(false)
   const [showParticipantsValues, setShowParticipantsValues] = useState(false)
-  const [totalValue, setTotalValue] = useState(0)
-  const [subTotal, setSubTotal] = useState(0)
+  const [totalValue, setTotalValue] = useState("0,00")
+  const [subTotal, setSubTotal] = useState("0,00")
   const [splitDebt, setSplitDebt] = useState(false)
   const [equitable, setEquitable] = useState(false)
   const [participants, setParticipants] = useState(initialParticipantsState)
@@ -66,7 +66,7 @@ const Rent = ({ users }) => {
   }, [subTotal])
 
   return (
-    <div className="form-group ">
+    <>
       <Input type="text" inputRef={houseNameInput} onChange={e => setName(e.target.value)} labelText="Qual o nome da casa?" placeholder="Nome da casa" value={name ? name : ""} />
       {
         showMoneyField && (
@@ -110,7 +110,10 @@ const Rent = ({ users }) => {
                   <div className="col-12">
                     {
                       showParticipantsValues &&
-                      participants.map((participant, index) => <Money key={index} labelText={`Parte de ${participant.label.split(" ")[0]}`} {...propsToValueMoneyEachParticipant(equitable)} />)
+                      participants.map((participant, index) => {
+
+                        return (<Money key={index} labelText={`Parte de ${participant.label.split(" ")[0]}`} {...propsToValueMoneyEachParticipant(equitable)} />)
+                      })
                     }
                   </div>
                 </>
@@ -119,7 +122,7 @@ const Rent = ({ users }) => {
           </>
         )
       }
-    </div>
+    </>
   )
 }
 
