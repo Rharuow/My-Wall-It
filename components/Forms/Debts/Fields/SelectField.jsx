@@ -20,7 +20,7 @@ const SelectField = ({
     <div className={`form-group ${divClassName ? divClassName : ""}`}>
       {
         labelText &&
-        <label htmlFor={name} className={`form-label ${labelClassName ? labelClassName : ""}`}>{labelText}</label>
+        <label htmlFor={ref} className={`form-label ${labelClassName ? labelClassName : ""}`}>{labelText}</label>
       }
       <Select
         onChange={onChange}
