@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
-import Select from 'react-select';
 
+import SelectField from './Debts/Fields/SelectField'
 import { debtName } from '../../assets/scripts/utils/translate'
 
 import Header from '../Board/Header'
@@ -25,11 +25,19 @@ const Forms = ({ params }) => {
       <Header name="Cadastre sua dívida" title="new debt" />
       <form>
         <div className="form-group">
-          <Select
+          <SelectField
             onChange={e => handlerSelect(e.value)}
             options={debts}
             placeholder="Selecione um tipo de dívida"
             ref={debtTypeInput}
+            className="text-center"
+            labelText="Qual tipo de despesa?"
+            styles={{
+              valueContainer: (provided) => ({
+                ...provided,
+                justifyContent: 'center',
+              })
+            }}
           />
         </div>
         {
@@ -64,6 +72,7 @@ const Forms = ({ params }) => {
             ]}
           />
         }
+        <button type="submit" className="btn btn-success">Cadastrar</button>
       </form>
     </>
   )

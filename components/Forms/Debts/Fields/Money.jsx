@@ -11,7 +11,7 @@ const Money = ({ value, onChange, disabled = false, className, divClassName, lab
       }
       {
         <div className="input-group">
-          <CurrencyInput value={value} prefix="R$ " name={name} id={name} disabled={disabled} className={`form-control ${className ? className : ""}`} decimalSeparator="," thousandSeparator="." onChangeEvent={onChange} />
+          <CurrencyInput value={value} prefix="R$ " name={name} id={name} disabled={disabled} className={`form-control text-center${className ? className : ""}`} decimalSeparator="," thousandSeparator="." onChangeEvent={onChange} />
         </div>
       }
     </div>
