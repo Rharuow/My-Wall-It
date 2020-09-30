@@ -65,3 +65,5 @@ export const borderColor = kind => {
       return "default"
   }
 }
+
+export const getMoneyValue = string => parseFloat(string.replace("R$ ", "").replace(".", "").replace(",", "."))
