@@ -57,7 +57,7 @@ const Forms = ({ params }) => {
                 "photo": "https://www.iconfinder.com/data/icons/diversity-avatars-vol-2/64/black-man-bald-beard-512.png"
               },
               {
-                "name": "Tayanne",
+                "name": "Tayanne Dantas",
                 "email": "tayanne@gmail.com",
                 "photo": "https://www.iconfinder.com/data/icons/sexy-portrait-girl-avatar-cute-beautiful-young-gir/283/female-138-512.png"
               }

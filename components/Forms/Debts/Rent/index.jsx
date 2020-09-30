@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Select from 'react-select'
 import makeAnimated from 'react-select/animated'
@@ -11,12 +11,9 @@ import { getMoneyValue } from '../../../../assets/scripts/utils/translate'
 
 const Rent = ({ users }) => {
   const [session, loading] = useSession()
-  const allUser = users.map(user => ({ value: user.email, label: user.name, photo: user.photo }))
-  const options = allUser.filter(user => user.value !== session.user.email)
-  const initialParticipantsState = [{ value: session.user.email, label: session.user.name, photo: session.user.image }]
-
-  const houseNameInput = useRef("houseNameInput")
-  const totalValueInput = useRef("totalValueInput")
+  const allUser = users.map((user, index) => ({ id: index, email: user.email, name: user.name, photo: user.photo, status: "pending", value: "0,00" }))
+  const options = allUser.filter(user => user.email !== session.user.email)
+  const initialParticipantsState = [{ id: 0, email: session.user.email, name: session.user.name, photo: session.user.image, status: "pending", value: "0,00" }]
 
   const [name, setName] = useState("")
   const [showMoneyField, setShowMoneyField] = useState(false)
@@ -31,8 +28,8 @@ const Rent = ({ users }) => {
 
   const handlerParticipants = parts => {
     if (parts !== null) {
-      const tempParticipants = parts.map(part => part)
-      tempParticipants.push({ value: session.user.email, label: session.user.name, photo: session.user.image })
+      const tempParticipants = parts.map((part, index) => ({ id: index, email: part.value, name: part.label, photo: part.photo, status: "pending", value: "0,00" }))
+      tempParticipants.push({ id: 0, email: session.user.email, name: session.user.name, photo: session.user.image, status: "pending", value: "0,00" })
       setParticipants(tempParticipants)
     } else {
       setParticipants(initialParticipantsState)
@@ -45,7 +42,16 @@ const Rent = ({ users }) => {
       value = getMoneyValue(totalValue) / participants.length
       onChange = (() => setSubTotal(value))
     } else {
-      onChange = (e => setSubTotal(getMoneyValue(totalValue) - getMoneyValue(e.target.value)))
+      onChange = (e => {
+        const email = e.target.name.split("-")[1]
+        const tempParticipants = participants.map(participant => {
+          if (participant.email !== email) return participant
+          return ({ id: participant.id, email: participant.email, name: participant.name, photo: participant.photo, status: "pending", value: e.target.value })
+        })
+        setParticipants(tempParticipants)
+        value = e.target.value
+        setSubTotal(getMoneyValue(totalValue) - getMoneyValue(e.target.value))
+      })
     }
     const props = { onChange, disabled, value }
     return props
@@ -62,16 +68,16 @@ const Rent = ({ users }) => {
   }, [participants, showParticipantsValues])
 
   useEffect(() => {
-    console.log(subTotal)
-  }, [subTotal])
+    console.log(participants)
+  }, [subTotal, participants])
 
   return (
     <>
-      <Input type="text" inputRef={houseNameInput} onChange={e => setName(e.target.value)} labelText="Qual o nome da casa?" placeholder="Nome da casa" value={name ? name : ""} />
+      <Input type="text" name={"houseNameInput"} onChange={e => setName(e.target.value)} labelText="Qual o nome da casa?" placeholder="Nome da casa" value={name ? name : ""} />
       {
         showMoneyField && (
           <>
-            <Money value={totalValue} onChange={e => handlerTotalValue(e.target.value)} inputRef={totalValueInput} labelText="Qual valor do aluguel?" />
+            <Money value={totalValue} onChange={e => handlerTotalValue(e.target.value)} name={"totalValueInput"} labelText="Qual valor do aluguel?" />
             <div className="form-row">
               <div className="col-6">
                 <label>Vai dividir a conta?</label>
@@ -101,7 +107,7 @@ const Rent = ({ users }) => {
                       closeMenuOnSelect={false}
                       components={makeAnimated()}
                       isMulti
-                      options={options}
+                      options={options.map(participant => ({ value: participant.email, label: participant.name, photo: participant.photo }))}
                       onChange={e => handlerParticipants(e)}
                       placeholder="Selecione os participantes"
                       className="mt-3"
@@ -110,10 +116,7 @@ const Rent = ({ users }) => {
                   <div className="col-12">
                     {
                       showParticipantsValues &&
-                      participants.map((participant, index) => {
-
-                        return (<Money key={index} labelText={`Parte de ${participant.label.split(" ")[0]}`} {...propsToValueMoneyEachParticipant(equitable)} />)
-                      })
+                      participants.map((participant, index) => <Money key={index} name={`eachValueInput-${participant.email}`} labelText={`Parte de ${participant.name.split(" ")[0]}`} {...propsToValueMoneyEachParticipant(equitable)} />)
                     }
                   </div>
                 </>

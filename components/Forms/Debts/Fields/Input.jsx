@@ -1,9 +1,9 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 const Input = ({
   type,
-  inputRef,
+  name,
   labelText,
   divClassName,
   labelClassName,
@@ -16,9 +16,9 @@ const Input = ({
     <div className={`form-group ${divClassName ? divClassName : ""}`}>
       {
         labelText &&
-        <label htmlFor={inputRef} className={labelClassName}>{labelText}</label>
+        <label htmlFor={name} className={`form-label ${labelClassName ? labelClassName : ""}`}>{labelText}</label>
       }
-      <input className={`form-control ${inputClassName}`} onChange={onChange} ref={inputRef} type={type ? type : "text"} value={value ? value : ""} placeholder={placeholder} />
+      <input className={`form-control ${inputClassName ? inputClassName : ""}`} onChange={onChange} name={name} id={name} type={type ? type : "text"} value={value ? value : ""} placeholder={placeholder} />
     </div>
   )
 }
