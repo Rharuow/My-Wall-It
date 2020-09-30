@@ -11,7 +11,6 @@
         "dueDate": "10/09/2020",
         "status": "pending",
         "own": "Arthur Cesar",
-        "isYour": true,
         "participants": [
           {
             "id": 1,
@@ -47,7 +46,6 @@
         "createdAt": "10/08/2020",
         "dueDate": "",
         "status": "paid",
-        "isYour": true,
         "own": "Arthur Cesar",
         "participants": [
           {
@@ -85,7 +83,6 @@
         "dueDate": "",
         "status": "late",
         "own": "Arthur Cesar",
-        "isYour": true,
         "participants": [
           {
             "id": 1,
@@ -122,7 +119,6 @@
         "dueDate": "10/09/2020",
         "status": "late",
         "own": "Arthur Cesar",
-        "isYour": true,
         "participants": [
           {
             "id": 1,
@@ -159,7 +155,6 @@
         "dueDate": "",
         "status": "late",
         "own": "Harysson Soares",
-        "isYour": true,
         "participants": [
           {
             "id": 1,
@@ -199,7 +194,6 @@
         "dueDate": "",
         "status": "late",
         "own": "Clara Yasmim",
-        "isYour": true,
         "itens": [
           {
             "id": 1,
@@ -264,7 +258,6 @@
         "time": "5:25:03",
         "dueDate": "",
         "status": "paid",
-        "isYour": true,
         "own": "Harysson Soares",
         "itens": [
           {
@@ -330,7 +323,6 @@
         "dueDate": "",
         "status": "late",
         "own": "Harysson Soares",
-        "isYour": true,
         "participants": [
           {
             "id": 1,
@@ -369,7 +361,6 @@
         "dueDate": "",
         "status": "activate",
         "own": "Arthur Cesar",
-        "isYour": false,
         "turn": "Gabriel Dias",
         "participants": [
           {
@@ -421,7 +412,6 @@
         "dueDate": "",
         "status": "activate",
         "own": "Harysson Soares",
-        "isYour": true,
         "turn": "Arthur Cesar",
         "participants": [
           {
