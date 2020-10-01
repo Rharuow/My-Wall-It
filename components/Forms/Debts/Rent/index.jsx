@@ -78,7 +78,7 @@ const Rent = ({ users }) => {
 
             <Money value={totalValue} onChange={e => handlerTotalValue(e.target.value)} name={"totalValueInput"} labelText="Qual valor do aluguel?" />
             <div className="form-row">
-              <div className="col-6">
+              <div className="col-6 d-flex flex-column align-items-center">
                 <label>Vai dividir a conta?</label>
                 <ToggleButton
                   inactiveLabel="Não"
@@ -91,7 +91,7 @@ const Rent = ({ users }) => {
               {
                 splitDebt &&
                 <>
-                  <div className="col-6">
+                  <div className="col-6 d-flex flex-column align-items-center">
                     <label>Divisão por igual?</label>
                     <ToggleButton
                       inactiveLabel="Não"

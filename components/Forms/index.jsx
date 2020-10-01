@@ -69,7 +69,7 @@ const Forms = ({ params }) => {
             ]}
           />
         }
-        <button type="submit" className="btn btn-success">Cadastrar</button>
+        <button type="submit" className="btn btn-success mt-3">Cadastrar</button>
       </form>
     </>
   )
