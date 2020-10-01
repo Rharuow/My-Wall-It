@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
 import SelectField from './Debts/Fields/SelectField'
@@ -18,8 +18,6 @@ const Forms = ({ params }) => {
     label: debtName(debt.title)
   }))
 
-  const debtTypeInput = useRef("debtTypeInput")
-
   return (
     <>
       <Header name="Cadastre sua dívida" title="new debt" />
@@ -29,7 +27,6 @@ const Forms = ({ params }) => {
             onChange={e => handlerSelect(e.value)}
             options={debts}
             placeholder="Selecione um tipo de dívida"
-            ref={debtTypeInput}
             className="text-center"
             labelText="Qual tipo de despesa?"
             styles={{
