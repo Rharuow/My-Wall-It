@@ -13,27 +13,49 @@ import { getMoneyValue } from '../../../../assets/scripts/utils/translate'
 
 const Rent = ({ users }) => {
   const [session, loading] = useSession()
-  const allUser = users.map((user, index) => ({ id: index, email: user.email, name: user.name, photo: user.photo, status: "pending", value: "0,00" }))
+  const allUser = users.map((user, index) => ({ id: index, email: user.email, name: user.name, photo: user.photo, status: "pending", value: 0 }))
   const options = allUser.filter(user => user.email !== session.user.email)
-  const initialParticipantsState = [{ id: 0, email: session.user.email, name: session.user.name, photo: session.user.image, status: "pending", value: "0,00" }]
+  const initialParticipantsState = [{ id: 0, email: session.user.email, name: session.user.name, photo: session.user.image, status: "pending", value: 0 }]
 
   const [name, setName] = useState("")
   const [showMoneyField, setShowMoneyField] = useState(false)
   const [showParticipantsValues, setShowParticipantsValues] = useState(false)
-  const [totalValue, setTotalValue] = useState()
-  const [subTotal, setSubTotal] = useState(0.00)
+  const [totalValue, setTotalValue] = useState(0)
+  const [subTotal, setSubTotal] = useState(0)
   const [splitDebt, setSplitDebt] = useState(false)
   const [equitable, setEquitable] = useState(false)
   const [participants, setParticipants] = useState(initialParticipantsState)
   const [currentParticipant, setCurrentParticipant] = useState()
   const [startDate, setStartDate] = useState(moment().format("yyyy-MM-DD"));
 
-  const handlerTotalValue = value => setTotalValue(value)
+  const handlerTotalValue = value => setTotalValue(getMoneyValue(value))
 
   const handlerParticipants = parts => {
     if (parts !== null) {
-      const tempParticipants = parts.map((part, index) => ({ id: index, email: part.value, name: part.label, photo: part.photo, status: "pending", value: 0 }))
-      tempParticipants.push({ id: 0, email: session.user.email, name: session.user.name, photo: session.user.image, status: "pending", value: 0 })
+      const tempParticipants = parts.map((part, index) => (
+        {
+          id: index,
+          email: part.value,
+          name: part.label,
+          photo: part.photo,
+          status: "pending",
+          value: equitable ?
+            (totalValue / (parts.length + 1))
+            :
+            0
+        }))
+      tempParticipants.push({
+        id: 0,
+        email: session.user.email,
+        name: session.user.name,
+        photo: session.user.image,
+        status: "pending",
+        value: equitable ?
+          (totalValue / (parts.length + 1))
+          :
+          0
+      })
+
       setParticipants(tempParticipants)
     } else {
       setParticipants(initialParticipantsState)
@@ -57,9 +79,11 @@ const Rent = ({ users }) => {
   }, [name, showMoneyField])
 
   useEffect(() => {
-    let tempSubTotal = 0
-    participants.forEach(participant => tempSubTotal += participant.value)
-    setSubTotal(tempSubTotal)
+    if (!equitable) {
+      let tempSubTotal = 0
+      participants.forEach(participant => tempSubTotal += participant.value)
+      setSubTotal(tempSubTotal)
+    }
     if (participants.length > 0) return setShowParticipantsValues(true)
     return setShowParticipantsValues(false)
   }, [participants])
@@ -76,9 +100,9 @@ const Rent = ({ users }) => {
           <>
             <DateField date={startDate} onChange={date => setStartDate(date)} labelText="Próximo pagamento" name="dueDate" />
 
-            <Money value={totalValue} onChange={e => handlerTotalValue(e.target.value)} name={"totalValueInput"} labelText="Qual valor do aluguel?" />
+            <Money value={totalValue} onChange={e => handlerTotalValue(e)} name={"totalValueInput"} labelText="Qual valor do aluguel?" />
             <div className="form-row">
-              <div className="col-6 d-flex flex-column align-items-center">
+              <div className={`col-${splitDebt ? "6" : "12"} d-flex flex-column align-items-center`}>
                 <label>Vai dividir a conta?</label>
                 <ToggleButton
                   inactiveLabel="Não"
@@ -91,7 +115,7 @@ const Rent = ({ users }) => {
               {
                 splitDebt &&
                 <>
-                  <div className="col-6 d-flex flex-column align-items-center">
+                  <div className={`col-6 d-flex flex-column align-items-center`}>
                     <label>Divisão por igual?</label>
                     <ToggleButton
                       inactiveLabel="Não"
@@ -117,7 +141,14 @@ const Rent = ({ users }) => {
                   <div className="col-12">
                     {
                       showParticipantsValues &&
-                      participants.map((participant, index) => <Money key={index} name={`eachValueInput-${participant.email}`} disabled={equitable} labelText={`Parte de ${participant.name.split(" ")[0]}`} value={participant.value} onChange={e => handlerParticipantValue(getMoneyValue(e.target.value), e.target.name.split("-")[1])} />)
+                      participants.map((participant, index) => <Money
+                        key={index}
+                        name={`eachValueInput-${participant.email}`}
+                        disabled={equitable}
+                        labelText={`Parte de ${participant.name.split(" ")[0]}`}
+                        value={participant.value}
+                        onChange={e => handlerParticipantValue(getMoneyValue(e), participant.email)}
+                      />)
                     }
                   </div>
                 </>
