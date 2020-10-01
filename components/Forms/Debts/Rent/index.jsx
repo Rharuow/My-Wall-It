@@ -20,15 +20,15 @@ const Rent = ({ users }) => {
   const [name, setName] = useState("")
   const [showMoneyField, setShowMoneyField] = useState(false)
   const [showParticipantsValues, setShowParticipantsValues] = useState(false)
-  const [totalValue, setTotalValue] = useState(0)
-  const [subTotal, setSubTotal] = useState(0)
+  const [totalValue, setTotalValue] = useState()
+  const [subTotal, setSubTotal] = useState(0.00)
   const [splitDebt, setSplitDebt] = useState(false)
   const [equitable, setEquitable] = useState(false)
   const [participants, setParticipants] = useState(initialParticipantsState)
   const [currentParticipant, setCurrentParticipant] = useState()
   const [startDate, setStartDate] = useState(moment().format("yyyy-MM-DD"));
 
-  const handlerTotalValue = value => setTotalValue(getMoneyValue(value))
+  const handlerTotalValue = value => setTotalValue(value)
 
   const handlerParticipants = parts => {
     if (parts !== null) {

@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import CurrencyInput from 'react-currency-input';
 
 const Money = ({ value, onChange, disabled = false, className, divClassName, labelClassName, labelText, name }) => {
   return (
@@ -10,10 +11,7 @@ const Money = ({ value, onChange, disabled = false, className, divClassName, lab
       }
       {
         <div className="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">R$</span>
-          </div>
-          <input type="number" value={value} name={name} id={name} class="form-control" disabled={disabled} aria-label="Amount (to the nearest Real)" className={`form-control text-center${className ? className : ""}`} onChangeEvent={onChange} />
+          <CurrencyInput value={value} prefix="R$ " name={name} id={name} disabled={disabled} className={`form-control text-center${className ? className : ""}`} decimalSeparator="," thousandSeparator="." onChangeEvent={onChange} />
         </div>
       }
     </div>
