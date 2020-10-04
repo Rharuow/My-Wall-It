@@ -27,7 +27,7 @@ export const debtName = name => {
       return "Internete"
     case "supermarket":
       return "Supermercado"
-    case "orthers":
+    case "others":
       return "Outros"
   }
 }
