@@ -89,7 +89,7 @@ const Internet = ({ users }) => {
     <>
       <DateField date={startDate} onChange={date => setStartDate(date)} labelText="Próximo pagamento" name="dueDate" />
 
-      <Money value={totalValue} onChange={e => handlerTotalValue(e)} name={"totalValueInput"} labelText="Qual valor da internet?" />
+      <Money value={totalValue} onChange={e => handlerTotalValue(e)} name={"totalValueInput"} labelText="Qual valor da internete?" />
       <div className="form-row">
         <div className={`col-${splitDebt ? "6" : "12"} d-flex flex-column align-items-center`}>
           <label>Vai dividir a conta?</label>

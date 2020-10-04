@@ -4,7 +4,7 @@ import CurrencyInput from 'react-currency-input'
 
 const Money = ({ value, onChange, disabled = false, className, divClassName, labelClassName, labelText, name }) => {
   return (
-    <div className={`form-group ${divClassName ? divClassName : ""}`}>
+    <div className={`${divClassName ? divClassName : "form-group"}`}>
       {
         labelText &&
         <label htmlFor={name} className={`form-label ${labelClassName ? labelClassName : ""}`}>{labelText}</label>
