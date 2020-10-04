@@ -9,6 +9,7 @@ import Rent from './Debts/Rent'
 import Water from './Debts/Water'
 import Energy from './Debts/Energy'
 import Gas from './Debts/Gas'
+import Internet from './Debts/Internet'
 
 const Forms = ({ params }) => {
 
@@ -137,6 +138,37 @@ const Forms = ({ params }) => {
         {
           debtType === "gas" &&
           <Gas users={[
+            {
+              "name": "Harysson Soares",
+              "email": "haryssonsoares@gmail.com",
+              "photo": "https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png"
+            },
+            {
+              "name": "Clara Yasmim",
+              "email": "clara@gmail.com",
+              "photo": "https://www.iconfinder.com/data/icons/sexy-portrait-girl-avatar-cute-beautiful-young-gir/283/female-138-512.png"
+            },
+            {
+              "name": "Arthur Cesar",
+              "email": "arthur@gmail.com",
+              "photo": "https://i.pinimg.com/originals/d1/1a/45/d11a452f5ce6ab534e083cdc11e8035e.png"
+            },
+            {
+              "name": "Gabriel Dias",
+              "email": "gabrieldias@gmail.com",
+              "photo": "https://www.iconfinder.com/data/icons/diversity-avatars-vol-2/64/black-man-bald-beard-512.png"
+            },
+            {
+              "name": "Tayanne Dantas",
+              "email": "tayanne@gmail.com",
+              "photo": "https://www.iconfinder.com/data/icons/sexy-portrait-girl-avatar-cute-beautiful-young-gir/283/female-138-512.png"
+            }
+          ]}
+          />
+        }
+        {
+          debtType === "internet" &&
+          <Internet users={[
             {
               "name": "Harysson Soares",
               "email": "haryssonsoares@gmail.com",
