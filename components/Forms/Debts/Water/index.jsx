@@ -89,7 +89,7 @@ const Water = ({ users }) => {
     <>
       <DateField date={startDate} onChange={date => setStartDate(date)} labelText="Próximo pagamento" name="dueDate" />
 
-      <Money value={totalValue} onChange={e => handlerTotalValue(e)} name={"totalValueInput"} labelText="Qual valor do aluguel?" />
+      <Money value={totalValue} onChange={e => handlerTotalValue(e)} name={"totalValueInput"} labelText="Qual valor da conta de água?" />
       <div className="form-row">
         <div className={`col-${splitDebt ? "6" : "12"} d-flex flex-column align-items-center`}>
           <label>Vai dividir a conta?</label>

@@ -10,7 +10,7 @@ import Money from '../Fields/Money'
 import SelectField from '../Fields/SelectField'
 import { getMoneyValue } from '../../../../assets/scripts/utils/translate'
 
-const Water = ({ users }) => {
+const Gas = ({ users }) => {
 
   const [session, loading] = useSession()
   const allUser = users.map((user, index) => ({ id: index, email: user.email, name: user.name, photo: user.photo, status: "pending", value: 0 }))
@@ -89,7 +89,7 @@ const Water = ({ users }) => {
     <>
       <DateField date={startDate} onChange={date => setStartDate(date)} labelText="Data da compra" name="dueDate" />
 
-      <Money value={totalValue} onChange={e => handlerTotalValue(e)} name={"totalValueInput"} labelText="Qual valor do aluguel?" />
+      <Money value={totalValue} onChange={e => handlerTotalValue(e)} name={"totalValueInput"} labelText="Qual valor do gás?" />
       <div className="form-row">
         <div className={`col-${splitDebt ? "6" : "12"} d-flex flex-column align-items-center`}>
           <label>Vai dividir a conta?</label>
@@ -147,8 +147,8 @@ const Water = ({ users }) => {
   )
 }
 
-Water.propTypes = {
+Gas.propTypes = {
   user: PropTypes.object
 }
 
-export default Water
+export default Gas
