@@ -108,5 +108,17 @@
         "value": "required"
       }
     }
+  },
+  {
+    "title": "string",
+    "name": "string",
+    "type": "string",
+    "totalValue": "number",
+    "subTotal": "number",
+    "createdAt": "string",
+    "dueDate": "string",
+    "status": "string",
+    "own": "string",
+    "participants": "array"
   }
 ]
