@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import makeAnimated from 'react-select/animated'
 import { useSession } from 'next-auth/client'
@@ -80,6 +80,21 @@ const Supermarket = ({ users }) => {
     setParticipants(tempParticipants)
   }
 
+  const handlerProductsName = (value, key) => {
+    const tempProducts = products.map(product => ({ ...products, name: key === product.id ? value : product.name }))
+    setProducts(tempProducts)
+  }
+
+  const handlerProductsPrice = (value, key) => {
+    const tempProducts = products.map(product => ({ ...products, price: key === product.id ? value : product.price }))
+    setProducts(tempProducts)
+  }
+
+  const handlerProductsAmount = (value, key) => {
+    const tempProducts = products.map(product => ({ ...products, amount: key === product.id ? value : product.amount }))
+    setProducts(tempProducts)
+  }
+
   useEffect(() => {
     if (name === "") return setShowMoneyField(false)
     return setShowMoneyField(true)
@@ -127,13 +142,13 @@ const Supermarket = ({ users }) => {
                   {
                     products.map((product, index) => {
                       return (
-                        <>
-                          <Input type="text" name={`product-name-${index}`} divClassName="col-4" onChange={e => handlerProductsName(e.target.value, index)} labelText="Produto" placeholder="Nome" value={product.name ? product.name : ""} />
+                        <Fragment key={index}>
+                          <Input key={`product-name-${index}`} type="text" name={`product-name-${index}`} divClassName="col-4" onChange={e => handlerProductsName(e.target.value, index)} labelText="Produto" placeholder="Nome" value={product.name ? product.name : ""} />
 
-                          <Money value={product.price ? product.price : 0} divClassName="col-4" onChange={e => handlerProductsPrice(e, index)} name={`product-value-${index}`} labelText="Valor" />
+                          <Money key={`product-value-${index}`} value={product.price ? product.price : 0} divClassName="col-4" onChange={e => handlerProductsPrice(e, index)} name={`product-value-${index}`} labelText="Valor" />
 
-                          <Input type="number" name={`product-amount-${index}`} divClassName="col-4" onChange={e => handlerProductsAmount(e.target.value, index)} labelText="Quantidade" placeholder="ex: 1.5" value={product.amount ? product.amount : ""} />
-                        </>
+                          <Input key={`product-amount-${index}`} type="number" name={`product-amount-${index}`} divClassName="col-4" onChange={e => handlerProductsAmount(e.target.value, index)} labelText="Quantidade" placeholder="ex: 1.5" value={product.amount ? product.amount : ""} />
+                        </Fragment>
                       )
                     })
                   }
