@@ -10,6 +10,7 @@ import ToggleButton from 'react-toggle-button'
 import Input from '../Fields/Input'
 import Money from '../Fields/Money'
 import { getMoneyValue } from '../../../../assets/scripts/utils/translate'
+import Circle from '../../../Buttons/Circle'
 
 const Supermarket = ({ users }) => {
   const [session, loading] = useSession()
@@ -21,10 +22,10 @@ const Supermarket = ({ users }) => {
   const [showMoneyField, setShowMoneyField] = useState(false)
   const [details, setDetails] = useState(false)
   const [products, setProducts] = useState([{
-    id: 1,
+    id: 0,
     name: "",
     price: 0.0,
-    amount: 0
+    amount: ""
   }])
   const [showParticipantsValues, setShowParticipantsValues] = useState(false)
   const [totalValue, setTotalValue] = useState(0)
@@ -81,17 +82,19 @@ const Supermarket = ({ users }) => {
   }
 
   const handlerProductsName = (value, key) => {
-    const tempProducts = products.map(product => ({ ...products, name: key === product.id ? value : product.name }))
+    const tempProducts = products.map(product => {
+      return ({ ...product, name: key === product.id ? value : product.name })
+    })
     setProducts(tempProducts)
   }
 
   const handlerProductsPrice = (value, key) => {
-    const tempProducts = products.map(product => ({ ...products, price: key === product.id ? value : product.price }))
+    const tempProducts = products.map(product => ({ ...product, price: key === product.id ? value : product.price }))
     setProducts(tempProducts)
   }
 
   const handlerProductsAmount = (value, key) => {
-    const tempProducts = products.map(product => ({ ...products, amount: key === product.id ? value : product.amount }))
+    const tempProducts = products.map(product => ({ ...product, amount: key === product.id ? value : product.amount }))
     setProducts(tempProducts)
   }
 
@@ -147,13 +150,14 @@ const Supermarket = ({ users }) => {
 
                           <Money key={`product-value-${index}`} value={product.price ? product.price : 0} divClassName="col-4" onChange={e => handlerProductsPrice(e, index)} name={`product-value-${index}`} labelText="Valor" />
 
-                          <Input key={`product-amount-${index}`} type="number" name={`product-amount-${index}`} divClassName="col-4" onChange={e => handlerProductsAmount(e.target.value, index)} labelText="Quantidade" placeholder="ex: 1.5" value={product.amount ? product.amount : ""} />
+                          <Input key={`product-amount-${index}`} type="number" min="0" name={`product-amount-${index}`} divClassName="col-4" onChange={e => handlerProductsAmount(e.target.value, index)} labelText="Quantidade" placeholder="ex: 1.5" value={product.amount ? product.amount : ""} />
                         </Fragment>
                       )
                     })
                   }
                 </div>
             }
+            <Circle content="+" className="bg bg-success" contentClassName="text-dark" />
 
             <div className="form-row">
               <div className={`col-${splitDebt ? "6" : "12"} d-flex flex-column align-items-center`}>
@@ -215,8 +219,5 @@ const Supermarket = ({ users }) => {
   )
 }
 
-Supermarket.prototype = {
-  user: PropTypes.object
-}
 
 export default Supermarket
