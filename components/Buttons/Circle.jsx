@@ -3,8 +3,10 @@ import PropTypes from 'prop-types'
 
 const Circle = ({ content, className, contentClassName }) => {
   return (
-    <div className={`button-scope rounded-circle d-flex align-items-center justify-content-center ${className ? className : ""}`}>
-      <strong className={`${contentClassName ? contentClassName : ""}`}>{content}</strong>
+    <div className="button">
+      <div className={`button-scope rounded-circle d-flex align-items-center justify-content-center ${className ? className : ""}`}>
+        <storng className={`button-content ${contentClassName ? contentClassName : ""}`}>{content}</storng>
+      </div>
     </div>
   )
 }

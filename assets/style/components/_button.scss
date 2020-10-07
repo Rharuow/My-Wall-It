@@ -1,4 +1,10 @@
-.button-scope {
-  width: 2rem;
-  height: 2rem;
-}
+.button {
+  .button-scope {
+    width: 2rem;
+    height: 2rem;
+
+    .button-content {
+      font-size: 2rem;
+    }
+  }
+} 

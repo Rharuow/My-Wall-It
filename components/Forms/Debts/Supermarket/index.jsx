@@ -155,9 +155,9 @@ const Supermarket = ({ users }) => {
                       )
                     })
                   }
+                  <Circle content="+" className="bg bg-success mt-2" contentClassName="text-dark" />
                 </div>
             }
-            <Circle content="+" className="bg bg-success" contentClassName="text-dark" />
 
             <div className="form-row">
               <div className={`col-${splitDebt ? "6" : "12"} d-flex flex-column align-items-center`}>
