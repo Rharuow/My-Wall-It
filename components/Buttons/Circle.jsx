@@ -1,20 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Circle = ({ content, className, contentClassName }) => {
+const Circle = ({ icon, className, onClick }) => {
   return (
-    <div className="button">
-      <div className={`button-scope rounded-circle d-flex align-items-center justify-content-center ${className ? className : ""}`}>
-        <storng className={`button-content ${contentClassName ? contentClassName : ""}`}>{content}</storng>
-      </div>
+    <div className={`button rounded-circle d-flex align-items-center justify-content-center ${className ? className : ""}`} onClick={onClick}>
+      <span className={`${icon ? icon : ""}`}></span>
     </div>
   )
 }
 
 Circle.propTypes = {
-  content: PropTypes.string,
+  icon: PropTypes.string,
   className: PropTypes.string,
-  contentClassName: PropTypes.string,
+  onClick: PropTypes.func
 }
 
 export default Circle

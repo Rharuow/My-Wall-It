@@ -19,7 +19,7 @@ const Money = ({ value, onChange, disabled = false, className, divClassName, lab
 }
 
 Money.propTypes = {
-  defaultValue: PropTypes.string,
+  value: PropTypes.number,
   onChange: PropTypes.func,
   className: PropTypes.string,
   divClassName: PropTypes.string,

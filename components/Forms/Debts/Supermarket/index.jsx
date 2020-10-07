@@ -91,10 +91,26 @@ const Supermarket = ({ users }) => {
   const handlerProductsPrice = (value, key) => {
     const tempProducts = products.map(product => ({ ...product, price: key === product.id ? value : product.price }))
     setProducts(tempProducts)
+    console.log(totalValue)
   }
 
   const handlerProductsAmount = (value, key) => {
     const tempProducts = products.map(product => ({ ...product, amount: key === product.id ? value : product.amount }))
+    setProducts(tempProducts)
+  }
+
+  const handlerProducts = (type) => {
+    const tempProducts = products.map(product => ({ ...product }))
+    type === "plus" ?
+      tempProducts.push({
+        id: products.length,
+        name: "",
+        price: 0.0,
+        amount: ""
+      })
+      :
+      tempProducts.pop()
+
     setProducts(tempProducts)
   }
 
@@ -112,6 +128,15 @@ const Supermarket = ({ users }) => {
     if (participants.length > 0) return setShowParticipantsValues(true)
     return setShowParticipantsValues(false)
   }, [participants])
+
+  useEffect(() => {
+    const tempTotal = products.reduce((total, product) => total.price + product.price)
+    setTotalValue(tempTotal.price)
+  }, [products])
+
+  useEffect(() => {
+    console.log(products)
+  }, [totalValue])
 
   useEffect(() => {
     subTotal > totalValue && handlerParticipantValue(0, currentParticipant)
@@ -139,7 +164,8 @@ const Supermarket = ({ users }) => {
             </div>
             {
               !details ?
-                <Money value={totalValue} onChange={e => handlerTotalValue(e)} name={"totalValueInput"} labelText="Qual valor Total da compra?" />
+                <Money value={totalValue ? totalValue : 0} onChange={e =>
+                  handlerTotalValue(e)} name={"totalValueInput"} labelText="Qual valor Total da compra?" />
                 :
                 <div className="form-row mb-4">
                   {
@@ -148,14 +174,17 @@ const Supermarket = ({ users }) => {
                         <Fragment key={index}>
                           <Input key={`product-name-${index}`} type="text" name={`product-name-${index}`} divClassName="col-4" onChange={e => handlerProductsName(e.target.value, index)} labelText="Produto" placeholder="Nome" value={product.name ? product.name : ""} />
 
-                          <Money key={`product-value-${index}`} value={product.price ? product.price : 0} divClassName="col-4" onChange={e => handlerProductsPrice(e, index)} name={`product-value-${index}`} labelText="Valor" />
+                          <Money key={`product-value-${index}`} value={product.price ? product.price : 0} divClassName="col-4" onChange={e => handlerProductsPrice(getMoneyValue(e), index)} name={`product-value-${index}`} labelText="Valor" />
 
                           <Input key={`product-amount-${index}`} type="number" min="0" name={`product-amount-${index}`} divClassName="col-4" onChange={e => handlerProductsAmount(e.target.value, index)} labelText="Quantidade" placeholder="ex: 1.5" value={product.amount ? product.amount : ""} />
                         </Fragment>
                       )
                     })
                   }
-                  <Circle content="+" className="bg bg-success mt-2" contentClassName="text-dark" />
+                  <div className="col-12 d-flex justify-content-around">
+                    <Circle icon="fas fa-plus" onClick={() => handlerProducts("plus")} className="btn btn-success mt-2" contentClassName="text-dark" />
+                    <Circle icon="fas fa-minus" onClick={() => handlerProducts()} className="btn btn-danger mt-2" contentClassName="text-dark" />
+                  </div>
                 </div>
             }
 
@@ -217,6 +246,10 @@ const Supermarket = ({ users }) => {
       }
     </>
   )
+}
+
+Supermarket.prototype = {
+  users: PropTypes.object
 }
 
 
