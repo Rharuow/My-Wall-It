@@ -91,7 +91,6 @@ const Supermarket = ({ users }) => {
   const handlerProductsPrice = (value, key) => {
     const tempProducts = products.map(product => ({ ...product, price: key === product.id ? value : product.price }))
     setProducts(tempProducts)
-    console.log(totalValue)
   }
 
   const handlerProductsAmount = (value, key) => {
@@ -109,7 +108,7 @@ const Supermarket = ({ users }) => {
         amount: ""
       })
       :
-      tempProducts.pop()
+      products.length > 1 && tempProducts.pop()
 
     setProducts(tempProducts)
   }
@@ -136,6 +135,9 @@ const Supermarket = ({ users }) => {
 
   useEffect(() => {
     console.log(products)
+    console.log(totalValue)
+    const tempParticipants = participants.map(participant => ({ ...participant, value: equitable ? totalValue / participants.length : 0 }))
+    setParticipants(tempParticipants)
   }, [totalValue])
 
   useEffect(() => {
