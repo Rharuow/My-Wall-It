@@ -11,22 +11,23 @@ const SelectField = ({
   onChange,
   options,
   placeholder,
-  ref,
+  name,
   className,
-  closeMenuOnSelect = false,
+  closeMenuOnSelect = true,
   styles
 }) => {
   return (
     <div className={`form-group ${divClassName ? divClassName : ""}`}>
       {
         labelText &&
-        <label htmlFor={ref} className={`form-label ${labelClassName ? labelClassName : ""}`}>{labelText}</label>
+        <label htmlFor={name} className={`form-label ${labelClassName ? labelClassName : ""}`}>{labelText}</label>
       }
       <Select
         onChange={onChange}
         options={options}
         placeholder={placeholder}
-        ref={ref}
+        name={name}
+        id={name}
         className={className}
         isMulti={isMulti}
         components={components}
