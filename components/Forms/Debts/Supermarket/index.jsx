@@ -66,7 +66,18 @@ const Supermarket = ({ users }) => {
 
       setParticipants(tempParticipants)
     } else {
-      setParticipants(initialParticipantsState)
+      const tempParticipants = [{
+        id: 0,
+        email: session.user.email,
+        name: session.user.name,
+        photo: session.user.image,
+        status: "pending",
+        value: equitable ?
+          totalValue
+          :
+          0
+      }]
+      setParticipants(tempParticipants)
     }
   }
 
@@ -104,7 +115,7 @@ const Supermarket = ({ users }) => {
       tempProducts.push({
         id: products.length,
         name: "",
-        price: 0.0,
+        price: 0,
         amount: ""
       })
       :
@@ -129,13 +140,14 @@ const Supermarket = ({ users }) => {
   }, [participants])
 
   useEffect(() => {
-    const tempTotal = products.reduce((total, product) => total.price + product.price)
-    setTotalValue(tempTotal.price)
+    let tempTotal = 0
+    products.forEach(product => {
+      tempTotal += product.price
+    })
+    setTotalValue(tempTotal)
   }, [products])
 
   useEffect(() => {
-    console.log(products)
-    console.log(totalValue)
     const tempParticipants = participants.map(participant => ({ ...participant, value: equitable ? totalValue / participants.length : 0 }))
     setParticipants(tempParticipants)
   }, [totalValue])
