@@ -13,6 +13,7 @@ const Input = ({
   value,
   min,
   max,
+  disabled = false
 }) => {
   return (
     <div className={`${divClassName ? divClassName : "form-group"}`}>
@@ -20,7 +21,7 @@ const Input = ({
         labelText &&
         <label htmlFor={name} className={`form-label ${labelClassName ? labelClassName : ""}`}>{labelText}</label>
       }
-      <input min={min ? min : ""} max={max ? max : ""} className={`form-control text-center ${inputClassName ? inputClassName : ""}`} onChange={onChange} name={name} id={name} type={type ? type : "text"} value={value ? value : ""} placeholder={placeholder} />
+      <input min={min ? min : ""} max={max ? max : ""} disabled={disabled} className={`form-control text-center ${inputClassName ? inputClassName : ""}`} onChange={onChange} name={name} id={name} type={type ? type : "text"} value={value ? value : ""} placeholder={placeholder} />
     </div>
   )
 }
@@ -37,6 +38,7 @@ Input.propTypes = {
   value: PropTypes.string,
   min: PropTypes.string,
   max: PropTypes.string,
+  disabled: PropTypes.bool,
 }
 
 export default Input

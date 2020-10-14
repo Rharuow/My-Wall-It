@@ -23,7 +23,7 @@ const Home = () => {
 
   return (
     <div className="main">
-      <Header name={session ? session.user.name : "Harysson Soares"} img={session ? session.user.image : "https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png"} closeSession={signOut} />
+      <Header name={session ? (session.user.name).split(" ")[0] + " " + (session.user.name).split(" ")[1] : "Harysson Soares"} img={session ? session.user.image : "https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png"} closeSession={signOut} />
       <div className="section">
         <h3 className="section-title">Despesas atuais</h3>
         <Slider {...settings}>
